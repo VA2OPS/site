@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueMap — VA2OPS</title>
+  <meta name="description" content="BlueMap — APRS tracking and mapping application with Search & Rescue support for amateur radio operators.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="topnav-brand"><span>VA2OPS</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.topnav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <div class="topnav-links">
+        <a href="index.html">About</a>
+        <a href="emcomm-tools.html">EmComm-Tools</a>
+        <a href="bluemap.html" class="active">BlueMap</a>
+        <a href="bbs-server.html">BBS Server</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <span class="hero-label">APRS · Mapping · Search &amp; Rescue</span>
+    <h1>BlueMap</h1>
+    <p>A desktop APRS tracking and mapping application designed for real-time station tracking and Search &amp; Rescue operations. Built on .NET 8 for Windows, with Bluetooth and Direwolf TNC connectivity.</p>
+  </header>
+
+  <section class="section">
+    <h2>What It Does</h2>
+    <p>BlueMap connects to Kenwood handheld transceivers (TH-D74, TH-D75) via Bluetooth SPP or to a Direwolf software TNC over TCP/IP. It receives and decodes APRS packets in real time, displays stations on an interactive tiled map, and provides a full SAR evidence management system for field operations.</p>
+    <p>The application supports multiple map tile sources with offline caching, making it fully operational in the field without internet connectivity. Sessions can be saved, loaded, and exported to PostgreSQL for post-operation analysis.</p>
+  </section>
+
+  <section class="section">
+    <h2>Key Features</h2>
+    <ul class="features">
+      <li>Real-time APRS station tracking on interactive tiled maps</li>
+      <li>Bluetooth SPP connectivity for Kenwood TH-D74/D75</li>
+      <li>Direwolf KISS-over-TCP connectivity for software TNCs</li>
+      <li>SAR object management — subjects, clues, hazards, POIs, infrastructure</li>
+      <li>Operator tracking with configurable colors and movement trails</li>
+      <li>Multiple map sources with SQLite tile caching for offline use</li>
+      <li>UTM grid overlay and coordinate systems for SAR operations</li>
+      <li>APRS message composition and inbox</li>
+      <li>Distance measurement tool</li>
+      <li>CSV and GeoJSON export for SAR evidence</li>
+      <li>Session save/load and PostgreSQL export</li>
+      <li>Bilingual support — English and French</li>
+      <li>Military map scale presets (1:2,500 to 1:250,000)</li>
+      <li>Automatic reconnection with exponential backoff</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>SAR Object System</h2>
+    <p>BlueMap includes a comprehensive evidence management system built for Search &amp; Rescue teams. Objects are organized into categories — subjects, clues (clothing, personal effects, track signs), animals, hazards, points of interest (PLS, LKP, IPP), and infrastructure. Each object records location, finder, timestamp, and notes.</p>
+    <p>SAR data can be exported to CSV for spreadsheets or GeoJSON for GIS applications like QGIS, ArcGIS, and Google Earth, enabling seamless integration with existing SAR workflows.</p>
+  </section>
+
+  <section class="section">
+    <h2>System Requirements</h2>
+    <ul class="features">
+      <li>Windows 10 or later</li>
+      <li>.NET 8.0 Desktop Runtime</li>
+      <li>Bluetooth-capable PC (for Kenwood TNC connection)</li>
+      <li>Internet connection for online tiles, or pre-cached tiles for offline</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Connectivity</h2>
+    <table class="freq-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Device / Software</th>
+          <th>Protocol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bluetooth SPP</td>
+          <td>Kenwood TH-D74, TH-D75</td>
+          <td>Serial over Bluetooth</td>
+        </tr>
+        <tr>
+          <td>TCP/IP</td>
+          <td>Direwolf software TNC</td>
+          <td>KISS-over-TCP (default port 8001)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Sylvain Deguire (VA2OPS) · Quebec, Canada</span>
+      <span>73 de VA2OPS</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VA2OPS — Sylvain Deguire</title>
+  <meta name="description" content="Portfolio of Sylvain Deguire (VA2OPS) — Amateur radio operator, EmComm developer, and digital communications enthusiast from Quebec, Canada.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="topnav-brand"><span>VA2OPS</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.topnav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <div class="topnav-links">
+        <a href="index.html" class="active">About</a>
+        <a href="emcomm-tools.html">EmComm-Tools</a>
+        <a href="bluemap.html">BlueMap</a>
+        <a href="bbs-server.html">BBS Server</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <span class="hero-label">Amateur Radio · EmComm · Digital Modes</span>
+    <h1>Sylvain Deguire <span class="muted" style="font-weight:400">(VA2OPS)</span></h1>
+    <p>Amateur radio operator from Quebec, Canada. Building open-source tools for emergency communications, APRS tracking, and packet radio — because when everything else goes down, radio still works.</p>
+  </header>
+
+  <!-- Projects -->
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+
+      <a href="emcomm-tools.html" class="card" style="text-decoration:none">
+        <h3>EmComm-Tools OS</h3>
+        <p>Bilingual Debian-based Linux distribution for amateur radio emergency communications. A ready-to-deploy operating system with digital mode software, Winlink, and VARA pre-installed.</p>
+        <span class="tag">Linux</span>
+        <span class="tag">Debian</span>
+        <span class="tag">EmComm</span>
+      </a>
+
+      <a href="bluemap.html" class="card" style="text-decoration:none">
+        <h3>BlueMap</h3>
+        <p>Desktop APRS tracking and mapping application with Search &amp; Rescue object management. Connects to Kenwood handhelds via Bluetooth or Direwolf TNC.</p>
+        <span class="tag">.NET 8</span>
+        <span class="tag">APRS</span>
+        <span class="tag">SAR</span>
+      </a>
+
+      <a href="bbs-server.html" class="card" style="text-decoration:none">
+        <h3>BBS Server — TPRFN Hub</h3>
+        <p>First Canadian hub station on The Packet Radio RF Forwarding Network. 24/7 BBS, Winlink RMS, Chat, Weather, and News over VARA HF on 40m and 80m.</p>
+        <span class="tag">VARA HF</span>
+        <span class="tag">BBS</span>
+        <span class="tag">Packet</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <hr class="divider">
+    <h2>About Me</h2>
+    <p>I'm a licensed amateur radio operator based in Quebec, Canada. My focus is on emergency communications (EmComm), digital modes, and building tools that help the ham radio community be better prepared when traditional infrastructure fails.</p>
+    <p>I maintain and develop several open-source projects aimed at making amateur radio more accessible — from a complete Linux OS tailored for EmComm deployments, to an APRS mapping application built for Search &amp; Rescue operations, to running a 24/7 packet radio BBS hub connecting Canada to the TPRFN network.</p>
+    <p>I believe in the ham radio spirit: share knowledge, build community, help each other. All my projects are open source or freely available.</p>
+
+    <div class="links-row">
+      <a href="https://www.qrz.com/db/VA2OPS" target="_blank" rel="noopener" class="btn">QRZ Profile ↗</a>
+      <a href="mailto:contact@va2ops.ca" class="btn btn-primary">✉ Email</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Sylvain Deguire (VA2OPS) · Quebec, Canada</span>
+      <span>73 de VA2OPS</span>
+    </div>
+  </footer>
+
+</body>
+</html>
