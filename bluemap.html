@@ -31,7 +31,7 @@
 
   <section class="section">
     <h2>What It Does</h2>
-    <p>BlueMap connects to Kenwood handheld transceivers (TH-D74, TH-D75) via Bluetooth SPP or to a Direwolf software TNC over TCP/IP. It receives and decodes APRS packets in real time, displays stations on an interactive tiled map, and provides a full SAR evidence management system for field operations.</p>
+    <p>BlueMap connects to a growing list of transceivers via Bluetooth SPP, KISS TNC, or Direwolf software TNC over TCP/IP. Currently supported radios include the Kenwood TH-D74, TH-D75, VGC N-76, and BHTech UV-PRO, with more on the way (including the Kenwood TM-D750A). It receives and decodes APRS packets in real time, displays stations on an interactive tiled map, and provides a full SAR evidence management system for field operations.</p>
     <p>The application supports multiple map tile sources with offline caching, making it fully operational in the field without internet connectivity. Sessions can be saved, loaded, and exported to PostgreSQL for post-operation analysis.</p>
   </section>
 
@@ -40,6 +40,7 @@
     <ul class="features">
       <li>Real-time APRS station tracking on interactive tiled maps</li>
       <li>Bluetooth SPP connectivity for Kenwood TH-D74/D75</li>
+      <li>KISS TNC support for VGC N-76 and BHTech UV-PRO</li>
       <li>Direwolf KISS-over-TCP connectivity for software TNCs</li>
       <li>SAR object management — subjects, clues, hazards, POIs, infrastructure</li>
       <li>Operator tracking with configurable colors and movement trails</li>
@@ -67,8 +68,10 @@
       <li>Windows 10 or later</li>
       <li>.NET 8.0 Desktop Runtime</li>
       <li>Bluetooth-capable PC (for Kenwood TNC connection)</li>
+      <li>Network adapter (Ethernet or Wi-Fi) for networked KISS TNC connections</li>
       <li>Internet connection for online tiles, or pre-cached tiles for offline</li>
     </ul>
+    <p class="mt-2">Looking for a ready-to-go KISS TNC setup? Our <a href="emcomm-tools.html">EmComm-Tools Debian OS</a> comes with Direwolf and all the networking tools pre-configured, giving you a complete TCP KISS TNC solution out of the box — just boot and connect.</p>
   </section>
 
   <section class="section">
@@ -88,9 +91,19 @@
           <td>Serial over Bluetooth</td>
         </tr>
         <tr>
+          <td>KISS TNC</td>
+          <td>VGC N-76, BHTech UV-PRO</td>
+          <td>KISS protocol</td>
+        </tr>
+        <tr>
           <td>TCP/IP</td>
           <td>Direwolf software TNC</td>
           <td>KISS-over-TCP (default port 8001)</td>
+        </tr>
+        <tr>
+          <td>Coming Soon</td>
+          <td>Kenwood TM-D750A</td>
+          <td>TBD</td>
         </tr>
       </tbody>
     </table>
