@@ -31,7 +31,7 @@
 
   <section class="section">
     <h2>What It Does</h2>
-    <p>BlueMap connects to a growing list of transceivers via Bluetooth (SPP and KISS TNC) or to a Direwolf software TNC over TCP/IP. Currently supported radios include the Kenwood TH-D74, TH-D75, VGC N-76, and BHTech UV-PRO, with more on the way (including the Kenwood TM-D750A). It receives and decodes APRS packets in real time, displays stations on an interactive tiled map, and provides a full SAR evidence management system for field operations.</p>
+    <p>BlueMap connects to a growing list of transceivers via Bluetooth KISS TNC or to a Direwolf software TNC over TCP/IP. Currently supported radios include the Kenwood TH-D74, TH-D75, VGC N-76, and BHTech UV-PRO, with more on the way (including the Kenwood TM-D750A). It receives and decodes APRS packets in real time, displays stations on an interactive tiled map, and provides a full SAR evidence management system for field operations.</p>
     <p>The application supports multiple map tile sources with offline caching, making it fully operational in the field without internet connectivity. Sessions can be saved, loaded, and exported to PostgreSQL for post-operation analysis.</p>
   </section>
 
@@ -39,8 +39,7 @@
     <h2>Key Features</h2>
     <ul class="features">
       <li>Real-time APRS station tracking on interactive tiled maps</li>
-      <li>Bluetooth SPP connectivity for Kenwood TH-D74/D75</li>
-      <li>Bluetooth KISS TNC support for VGC N-76 and BHTech UV-PRO</li>
+      <li>Bluetooth KISS TNC connectivity for Kenwood TH-D74/D75, VGC N-76, and BHTech UV-PRO</li>
       <li>Direwolf KISS-over-TCP connectivity for software TNCs</li>
       <li>SAR object management — subjects, clues, hazards, POIs, infrastructure</li>
       <li>Operator tracking with configurable colors and movement trails</li>
@@ -67,7 +66,7 @@
     <ul class="features">
       <li>Windows 10 or later</li>
       <li>.NET 8.0 Desktop Runtime</li>
-      <li>Bluetooth-capable PC (for Kenwood TNC connection)</li>
+      <li>Bluetooth-capable PC (for Bluetooth KISS TNC connections)</li>
       <li>Network adapter (Ethernet or Wi-Fi) for networked KISS TNC connections</li>
       <li>Internet connection for online tiles, or pre-cached tiles for offline</li>
     </ul>
@@ -86,13 +85,8 @@
       </thead>
       <tbody>
         <tr>
-          <td>Bluetooth SPP</td>
-          <td>Kenwood TH-D74, TH-D75</td>
-          <td>Serial over Bluetooth</td>
-        </tr>
-        <tr>
           <td>Bluetooth KISS TNC</td>
-          <td>VGC N-76, BHTech UV-PRO</td>
+          <td>Kenwood TH-D74, TH-D75, VGC N-76, BHTech UV-PRO</td>
           <td>KISS protocol over Bluetooth</td>
         </tr>
         <tr>
