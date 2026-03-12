@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serveur BBS — VA2OPS</title>
+  <meta name="description" content="Serveur BBS VA2OPS — Première station hub canadienne sur The Packet Radio RF Forwarding Network (TPRFN). Opérations VARA HF 24/7 sur 40m et 80m.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="topnav-brand"><span>VA2OPS</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.topnav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <div class="topnav-links">
+        <a href="index.html">À propos</a>
+        <a href="emcomm-tools.html">EmComm-Tools</a>
+        <a href="bluemap.html">BlueMap</a>
+        <a href="bbs-server.html" class="active">Serveur BBS</a>
+        <a href="services.html">Services</a>
+        <a href="../bbs-server.html" style="color: var(--accent);">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <span class="hero-label">Radio par paquets &middot; VARA HF &middot; Réseau TPRFN</span>
+    <h1>Serveur BBS</h1>
+    <p>Première station hub canadienne sur <strong>The Packet Radio RF Forwarding Network (TPRFN)</strong>. Un nœud BBS 24/7 offrant RMS Winlink, babillard électronique, chat en temps réel, météo et nouvelles &mdash; le tout par radio HF, aucun internet requis.</p>
+  </header>
+
+  <section class="section">
+    <h2>Description</h2>
+    <p>Le serveur BBS VA2OPS est un nœud radio par paquets à service complet opérant 24 heures sur 24 en HF. Il sert de station hub sur le réseau TPRFN &mdash; un réseau croissant de stations radioamateur qui acheminent les données par paquets exclusivement par RF, sans recourir à des liens internet (AXIP).</p>
+    <p>En tant que premier hub canadien sur le réseau, VA2OPS étend la couverture TPRFN au Canada, fournissant un point relais pour la messagerie store-and-forward, le chat clavier à clavier, les bulletins météo et les nouvelles à travers le réseau.</p>
+  </section>
+
+  <section class="section">
+    <h2>Services</h2>
+    <ul class="features">
+      <li>RMS Winlink &mdash; envoi et réception de courriels Winlink par RF</li>
+      <li>BBS &mdash; babillard électronique classique pour l'affichage et l'acheminement de messages</li>
+      <li>Chat &mdash; communication clavier à clavier en temps réel</li>
+      <li>Météo (WX) &mdash; bulletins et rapports météorologiques</li>
+      <li>Nouvelles &mdash; nouvelles et annonces du réseau</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Fréquences et horaire</h2>
+    <p>La station opère 24/7 en utilisant le modem VARA HF, changeant de bande selon les conditions de propagation :</p>
+    <table class="freq-table">
+      <thead>
+        <tr>
+          <th>Bande</th>
+          <th>Fréquence</th>
+          <th>Horaire</th>
+          <th>Modem</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>40 mètres</td>
+          <td>7.103,2 kHz</td>
+          <td>Jour</td>
+          <td>VARA HF</td>
+        </tr>
+        <tr>
+          <td>80 mètres</td>
+          <td>3.596 kHz</td>
+          <td>Nuit</td>
+          <td>VARA HF</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>À propos du TPRFN</h2>
+    <p>The Packet Radio RF Forwarding Network (TPRFN) est un réseau de stations radioamateur qui connecte les systèmes radio par paquets en utilisant les bandes HF et des modes numériques modernes comme VARA HF. Le réseau privilégie les liens NVIS (Near Vertical Incidence Skywave) pour une communication fiable, uniquement par RF &mdash; aucune infrastructure internet.</p>
+    <p>Le TPRFN fournit une infrastructure de communications numériques résiliente qui fonctionne quand les réseaux traditionnels sont indisponibles. Il supporte la messagerie store-and-forward, le chat interactif, le routage intelligent et la transmission de fichiers numériques entre les stations du réseau.</p>
+
+    <div class="links-row">
+      <a href="https://www.tprfn.net/" target="_blank" rel="noopener" class="btn btn-primary">Réseau TPRFN &#8599;</a>
+      <a href="https://www.tprfn.net/tprfn-hub-station-profiles" target="_blank" rel="noopener" class="btn">Profils des stations hub &#8599;</a>
+      <a href="https://www.tprfn.net/network-live-connections" target="_blank" rel="noopener" class="btn">Carte du réseau en direct &#8599;</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Comment se connecter</h2>
+    <p>Pour vous connecter au BBS VA2OPS, vous avez besoin d'un modem VARA HF et d'un logiciel client de paquets. Syntonisez la fréquence appropriée selon l'heure de la journée et connectez-vous avec votre logiciel de paquets préféré. Pour les guides de configuration et les détails sur comment rejoindre le réseau TPRFN, visitez le site web du TPRFN.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Sylvain Deguire (VA2OPS) &middot; Québec, Canada</span>
+      <span>73 de VA2OPS</span>
+    </div>
+  </footer>
+
+</body>
+</html>

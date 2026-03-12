@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VA2OPS — Sylvain Deguire</title>
+  <meta name="description" content="Portfolio de Sylvain Deguire (VA2OPS) — Radioamateur, développeur EmComm et passionné de communications numériques du Québec, Canada.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="topnav-brand"><span>VA2OPS</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.topnav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <div class="topnav-links">
+        <a href="index.html" class="active">À propos</a>
+        <a href="emcomm-tools.html">EmComm-Tools</a>
+        <a href="bluemap.html">BlueMap</a>
+        <a href="bbs-server.html">Serveur BBS</a>
+        <a href="services.html">Services</a>
+        <a href="../index.html" style="color: var(--accent);">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 2.5rem; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 280px;">
+        <span class="hero-label">Radioamateur · EmComm · Modes numériques</span>
+        <h1>Sylvain Deguire <span class="muted" style="font-weight:400">(VA2OPS)</span></h1>
+        <p>Radioamateur du Québec, Canada. Je développe des outils open source pour les communications d'urgence, le suivi APRS et la radio par paquets — parce que quand tout le reste tombe en panne, la radio fonctionne toujours.</p>
+      </div>
+      <img src="../photo_radio_operator.jpg" alt="Sylvain Deguire (VA2OPS) en opération sur le terrain" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 3px solid var(--border); flex-shrink: 0;">
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Projets</h2>
+    <div class="cards">
+
+      <a href="emcomm-tools.html" class="card" style="text-decoration:none">
+        <h3>EmComm-Tools OS</h3>
+        <p>Distribution Linux bilingue basée sur Debian pour les communications d'urgence radioamateur. Un système d'exploitation prêt à déployer avec les logiciels de modes numériques, Winlink et VARA préinstallés.</p>
+        <span class="tag">Linux</span>
+        <span class="tag">Debian</span>
+        <span class="tag">EmComm</span>
+      </a>
+
+      <a href="bluemap.html" class="card" style="text-decoration:none">
+        <h3>BlueMap</h3>
+        <p>Application de suivi APRS et de cartographie avec gestion d'objets de recherche et sauvetage. Se connecte aux radios portatives via Bluetooth ou au TNC Direwolf.</p>
+        <span class="tag">.NET 8</span>
+        <span class="tag">APRS</span>
+        <span class="tag">SAR</span>
+      </a>
+
+      <a href="bbs-server.html" class="card" style="text-decoration:none">
+        <h3>Serveur BBS — Hub TPRFN</h3>
+        <p>Première station hub canadienne sur The Packet Radio RF Forwarding Network. BBS 24/7, RMS Winlink, chat, météo et nouvelles via VARA HF sur 40m et 80m.</p>
+        <span class="tag">VARA HF</span>
+        <span class="tag">BBS</span>
+        <span class="tag">Packet</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <hr class="divider">
+    <h2>À propos</h2>
+    <p>Je suis un radioamateur licencié basé au Québec, Canada. Mon intérêt se porte sur les communications d'urgence (EmComm), les modes numériques et le développement d'outils qui aident la communauté radioamateur à être mieux préparée quand les infrastructures traditionnelles tombent en panne.</p>
+    <p>Je maintiens et développe plusieurs projets open source visant à rendre la radioamateur plus accessible — d'un système d'exploitation Linux complet adapté aux déploiements EmComm, à une application de cartographie APRS conçue pour les opérations de recherche et sauvetage, en passant par l'exploitation d'un hub BBS radio par paquets 24/7 reliant le Canada au réseau TPRFN.</p>
+    <p>Je crois en l'esprit radioamateur : partager les connaissances, bâtir la communauté, s'entraider. Tous mes projets sont open source ou librement disponibles.</p>
+
+    <div class="links-row">
+      <a href="https://www.qrz.com/db/VA2OPS" target="_blank" rel="noopener" class="btn">Profil QRZ &#8599;</a>
+      <a href="mailto:info@va2ops.ca" class="btn btn-primary">&#9993; Courriel</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Sylvain Deguire (VA2OPS) &middot; Québec, Canada</span>
+      <span>73 de VA2OPS</span>
+    </div>
+  </footer>
+
+</body>
+</html>

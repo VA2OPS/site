@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmComm-Tools OS — VA2OPS</title>
+  <meta name="description" content="EmComm-Tools OS Édition Debian — Distribution Linux bilingue pour les communications d'urgence radioamateur.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="topnav-brand"><span>VA2OPS</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.topnav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <div class="topnav-links">
+        <a href="index.html">À propos</a>
+        <a href="emcomm-tools.html" class="active">EmComm-Tools</a>
+        <a href="bluemap.html">BlueMap</a>
+        <a href="bbs-server.html">Serveur BBS</a>
+        <a href="services.html">Services</a>
+        <a href="../emcomm-tools.html" style="color: var(--accent);">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <span class="hero-label">Linux &middot; Debian &middot; Communications d'urgence</span>
+    <h1>EmComm-Tools OS</h1>
+    <p>Une distribution Linux bilingue (français/anglais) basée sur Debian, conçue pour les communications d'urgence radioamateur. Fork de EmComm-Tools OS Community par TheTechPrepper (KT7RUN), maintenu par Sylvain Deguire (VA2OPS).</p>
+  </header>
+
+  <section class="section">
+    <h2>Description</h2>
+    <p>EmComm-Tools OS Édition Debian est un système d'exploitation Linux prêt à déployer qui inclut tout ce dont un radioamateur a besoin pour les communications d'urgence numériques. Démarrez depuis une clé USB et vous êtes opérationnel &mdash; aucune expérience Linux requise.</p>
+    <p>Cette édition est construite sur Debian plutôt qu'Ubuntu, offrant des cycles de support plus longs, aucune restriction de marque sur la redistribution des ISO, et un support bilingue complet français/anglais &mdash; une nécessité pour les clubs radioamateur et les organismes d'urgence du Québec opérant sous la Loi 101.</p>
+  </section>
+
+  <section class="section">
+    <h2>Fonctionnalités</h2>
+    <ul class="features">
+      <li>Interface bilingue &mdash; français et anglais avec sélection de la langue au premier démarrage</li>
+      <li>Logiciels de modes numériques préinstallés : JS8Call, WSJTX, fldigi, Direwolf</li>
+      <li>Client Winlink (pat) avec VARA HF/FM préinstallé avec la permission du développeur</li>
+      <li>Wine32 préconfiguré pour les applications radioamateur Windows</li>
+      <li>Fonctionne hors ligne &mdash; tous les outils fonctionnent sans internet pour les scénarios SHTF</li>
+      <li>Images ISO prêtes à démarrer &mdash; aucun processus de compilation requis</li>
+      <li>Optimisé pour le déploiement terrain sur du matériel robuste (Panasonic Toughpads)</li>
+      <li>Basé sur Debian Stable avec cycle de support LTS de 3 à 5 ans</li>
+      <li>Base personnalisable pour les clubs, groupes régionaux et organismes d'urgence</li>
+      <li>Open source sous licence Ms-PL &mdash; forkez-le, adaptez-le à vos besoins</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Téléchargement ISO</h2>
+    <p>L'ISO actuel fait environ <strong>5 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
+    <p>Pour les appareils avec un stockage interne limité (comme les Panasonic Toughpads), les cartes peuvent être hébergées sur un disque externe ou une clé USB plutôt que sur le disque interne.</p>
+    <div class="links-row">
+      <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Télécharger l'ISO &#8599;</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>VARA HF/FM et VarAC</h2>
+
+    <div class="cards" style="grid-template-columns: 1fr;">
+
+      <div class="card">
+        <h3>VARA HF/FM &mdash; Préinstallé</h3>
+        <p>Les modems VARA HF et VARA FM sont préinstallés dans l'ISO avec la permission écrite de José Alberto Nieto Ros (EA5HVK), le développeur.</p>
+        <p class="mt-1">Les utilisateurs doivent tout de même acheter leur propre licence directement auprès d'EA5HVK pour débloquer la vitesse maximale. La version préinstallée fonctionne en mode démo jusqu'à l'enregistrement. Visitez <a href="https://rosmodem.wordpress.com" target="_blank" rel="noopener">rosmodem.wordpress.com</a> pour acheter votre licence.</p>
+        <p class="mt-1 muted" style="font-size: 0.85rem;">Nous nous engageons à garder VARA à jour avec les nouvelles versions dès qu'elles sont disponibles.</p>
+      </div>
+
+      <div class="card">
+        <h3>VarAC &mdash; Préinstallé</h3>
+        <p>VarAC est préinstallé dans l'ISO et prêt à utiliser dès le premier démarrage. Il fonctionne via Wine aux côtés de VARA HF/FM pour une solution de communications numériques complète, prête à l'emploi.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Outils de création USB bootable</h2>
+    <p>Le seul logiciel dont vous avez besoin est un créateur de clé USB bootable. Voici les options les plus fiables :</p>
+
+    <div class="cards" style="grid-template-columns: 1fr;">
+
+      <div class="card">
+        <h3>Windows</h3>
+        <ul class="features" style="grid-template-columns: 1fr;">
+          <li><a href="https://rufus.ie" target="_blank" rel="noopener">Rufus</a> &mdash; Rapide, fiable, open source. La référence pour Windows.</li>
+          <li><a href="https://etcher.balena.io" target="_blank" rel="noopener">balenaEtcher</a> &mdash; Processus simple en 3 étapes, valide l'écriture, multiplateforme.</li>
+          <li><a href="https://ventoy.net" target="_blank" rel="noopener">Ventoy</a> &mdash; Multi-boot &mdash; plusieurs ISO sur une seule clé USB.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>macOS</h3>
+        <ul class="features" style="grid-template-columns: 1fr;">
+          <li><a href="https://etcher.balena.io" target="_blank" rel="noopener">balenaEtcher</a> &mdash; Meilleur choix pour Mac &mdash; simple, fiable, application native.</li>
+          <li><a href="https://unetbootin.github.io" target="_blank" rel="noopener">UNetbootin</a> &mdash; Multiplateforme, fonctionne bien pour les ISO Linux.</li>
+          <li><strong>dd (Terminal)</strong> &mdash; Intégré, puissant mais demande de la prudence.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Linux</h3>
+        <ul class="features" style="grid-template-columns: 1fr;">
+          <li><a href="https://etcher.balena.io" target="_blank" rel="noopener">balenaEtcher</a> &mdash; Même interface simple, disponible en AppImage.</li>
+          <li><a href="https://ventoy.net" target="_blank" rel="noopener">Ventoy</a> &mdash; Installez-le une fois, puis copiez simplement les fichiers ISO sur la clé.</li>
+          <li><strong>GNOME Disks</strong> &mdash; Intégré à la plupart des bureaux GNOME, utilisez « Restaurer l'image disque ».</li>
+          <li><strong>dd</strong> &mdash; Outil Unix classique, rapide et fiable.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="mt-2">Pour les débutants, <a href="https://etcher.balena.io" target="_blank" rel="noopener">balenaEtcher</a> fonctionne sur toutes les plateformes et est l'option la plus simple. Pour les utilisateurs avancés, <a href="https://ventoy.net" target="_blank" rel="noopener">Ventoy</a> vous permet de mettre EmComm-Tools, un installateur Windows et des outils de récupération sur une seule clé USB.</p>
+  </section>
+
+  <section class="section">
+    <h2>Pourquoi Debian ?</h2>
+    <p>Le projet EmComm-Tools OS original était construit sur Ubuntu avec la philosophie de créer un « appliance » figé dans le temps. Bien que cette approche ait du mérite, le paysage des logiciels radioamateur évolue rapidement &mdash; quand JS8Call, fldigi ou pat-winlink publient des correctifs, il faut pouvoir les appliquer. Un OS figé rend cela difficile voire impossible, et quand le système de base atteint sa fin de vie, votre gestionnaire de paquets cesse de fonctionner.</p>
+    <p>Ubuntu est en fait construit par-dessus Debian. Passer d'Ubuntu à Debian n'est pas un changement radical &mdash; c'est revenir à la source. Les principaux avantages :</p>
+    <ul class="features">
+      <li>Aucune restriction de marque &mdash; nous pouvons distribuer librement des images ISO précompilées</li>
+      <li>Cycles de publication plus longs et plus stables (3 à 5 ans LTS)</li>
+      <li>Accès direct aux vastes dépôts de paquets Debian</li>
+      <li>Debian Ham Radio Pure Blend &mdash; JS8Call, WSJTX, fldigi, Direwolf correctement empaquetés</li>
+      <li>Projet communautaire sans charge corporative</li>
+      <li>Maintenance active sans le risque d'un système figé et abandonné</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>L'esprit radioamateur</h2>
+    <p>Ce projet n'est pas un produit fermé. C'est un point de départ &mdash; une base réutilisable et personnalisable que les clubs radio, groupes régionaux, organismes d'urgence et opérateurs individuels peuvent forker et adapter à leurs propres besoins. Partagez les connaissances, bâtissez la communauté.</p>
+  </section>
+
+  <section class="section">
+    <h2>Contribuer</h2>
+    <p>Ceci est un projet open source. Les contributions, rapports de bogues et demandes de fonctionnalités sont les bienvenus.</p>
+    <div class="links-row">
+      <a href="https://emcomm-tools.ca/" target="_blank" rel="noopener" class="btn btn-primary">Site web &#8599;</a>
+      <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn">Téléchargements ISO &#8599;</a>
+      <a href="https://github.com/emcomm-tools/debian/" target="_blank" rel="noopener" class="btn">GitHub &#8599;</a>
+      <a href="https://emcomm-tools.ca/FUTURES_fr.html" target="_blank" rel="noopener" class="btn">Documentation (FR) &#8599;</a>
+      <a href="https://buymeacoffee.com/emcommtools" target="_blank" rel="noopener" class="btn">&#9749; Buy Me a Coffee</a>
+      <a href="mailto:info@emcomm-tools.ca" class="btn">&#9993; info@emcomm-tools.ca</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Licence</h2>
+    <p>Ce projet est une œuvre dérivée de EmComm-Tools OS Community, sous licence <strong>Microsoft Public License (Ms-PL)</strong>. En conformité avec la section 3(C) de la Ms-PL, nous conservons tous les avis de droits d'auteur, brevets, marques et attributions du logiciel original.</p>
+    <p>La Ms-PL permet la création d'œuvres dérivées, la distribution d'images ISO précompilées, ainsi que la modification et la redistribution. Le passage d'Ubuntu à Debian élimine les restrictions de marque d'Ubuntu qui empêchaient auparavant la distribution d'images précompilées, tout en respectant pleinement les termes de la Ms-PL.</p>
+  </section>
+
+  <section class="section">
+    <h2>Remerciements</h2>
+    <ul class="features" style="grid-template-columns: 1fr;">
+      <li><strong>Gaston Gonzalez (KT7RUN)</strong> alias The Tech Prepper &mdash; Projet original EmComm-Tools OS Community</li>
+      <li><strong>L'équipe Debian Ham Radio</strong> &mdash; Maintenance d'excellents paquets radioamateur</li>
+      <li><strong>EA5HVK</strong> &mdash; Développement du modem VARA HF/FM</li>
+      <li><strong>Équipe de développement VarAC</strong> &mdash; Application de chat VarAC pour VARA</li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Sylvain Deguire (VA2OPS) &middot; Québec, Canada</span>
+      <span>73 de VA2OPS</span>
+    </div>
+  </footer>
+
+</body>
+</html>

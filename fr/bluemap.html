@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueMap — VA2OPS</title>
+  <meta name="description" content="BlueMap — Application de suivi APRS et de cartographie avec support de recherche et sauvetage pour les radioamateurs.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="topnav-brand"><span>VA2OPS</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.topnav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <div class="topnav-links">
+        <a href="index.html">À propos</a>
+        <a href="emcomm-tools.html">EmComm-Tools</a>
+        <a href="bluemap.html" class="active">BlueMap</a>
+        <a href="bbs-server.html">Serveur BBS</a>
+        <a href="services.html">Services</a>
+        <a href="../bluemap.html" style="color: var(--accent);">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <span class="hero-label">APRS &middot; Cartographie &middot; Recherche et sauvetage</span>
+    <h1>BlueMap</h1>
+    <p>Application de suivi APRS et de cartographie conçue pour le suivi de stations en temps réel et les opérations de recherche et sauvetage. Construite sur .NET 8 pour Windows, avec connectivité Bluetooth et TNC Direwolf.</p>
+  </header>
+
+  <section class="section">
+    <h2>Description</h2>
+    <p>BlueMap se connecte à une liste croissante de radios via Bluetooth KISS TNC ou à un TNC logiciel Direwolf via TCP/IP. Les radios actuellement supportées incluent les Kenwood TH-D74, TH-D75, VGC N-76 et BHTech UV-PRO, avec d'autres à venir (incluant le Kenwood TM-D750A). L'application reçoit et décode les paquets APRS en temps réel, affiche les stations sur une carte interactive tuilée et fournit un système complet de gestion d'évidences SAR pour les opérations terrain.</p>
+    <p>L'application supporte plusieurs sources de tuiles cartographiques avec mise en cache hors ligne, la rendant pleinement opérationnelle sur le terrain sans connexion internet. Les sessions peuvent être sauvegardées, chargées et exportées vers PostgreSQL pour l'analyse post-opération.</p>
+  </section>
+
+  <section class="section">
+    <h2>Fonctionnalités</h2>
+    <ul class="features">
+      <li>Suivi de stations APRS en temps réel sur cartes interactives tuilées</li>
+      <li>Connectivité Bluetooth KISS TNC pour Kenwood TH-D74/D75, VGC N-76 et BHTech UV-PRO</li>
+      <li>Connectivité Direwolf KISS-over-TCP pour les TNC logiciels</li>
+      <li>Gestion d'objets SAR &mdash; sujets, indices, dangers, POI, infrastructure</li>
+      <li>Suivi des opérateurs avec couleurs configurables et traces de déplacement</li>
+      <li>Sources de cartes multiples avec cache de tuiles SQLite pour l'utilisation hors ligne</li>
+      <li>Superposition de grille UTM et systèmes de coordonnées pour les opérations SAR</li>
+      <li>Composition et boîte de réception de messages APRS</li>
+      <li>Outil de mesure de distance</li>
+      <li>Export CSV et GeoJSON pour les évidences SAR</li>
+      <li>Sauvegarde/chargement de sessions et export PostgreSQL</li>
+      <li>Support bilingue &mdash; anglais et français</li>
+      <li>Préréglages d'échelle de carte militaire (1:2 500 à 1:250 000)</li>
+      <li>Reconnexion automatique avec backoff exponentiel</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Système d'objets SAR</h2>
+    <p>BlueMap inclut un système complet de gestion d'évidences conçu pour les équipes de recherche et sauvetage. Les objets sont organisés par catégories &mdash; sujets, indices (vêtements, effets personnels, traces), animaux, dangers, points d'intérêt (PLS, LKP, IPP) et infrastructure. Chaque objet enregistre la position, le découvreur, l'horodatage et des notes.</p>
+    <p>Les données SAR peuvent être exportées en CSV pour les tableurs ou en GeoJSON pour les applications SIG comme QGIS, ArcGIS et Google Earth, permettant une intégration transparente avec les flux de travail SAR existants.</p>
+  </section>
+
+  <section class="section">
+    <h2>Configuration requise</h2>
+    <ul class="features">
+      <li>Windows 10 ou ultérieur</li>
+      <li>.NET 8.0 Desktop Runtime</li>
+      <li>PC avec Bluetooth (pour les connexions Bluetooth KISS TNC)</li>
+      <li>Adaptateur réseau (Ethernet ou Wi-Fi) pour les connexions KISS TNC en réseau</li>
+      <li>Connexion internet pour les tuiles en ligne, ou tuiles pré-cachées pour le hors ligne</li>
+    </ul>
+    <p class="mt-2">Vous cherchez une solution KISS TNC prête à l'emploi ? Notre <a href="emcomm-tools.html">EmComm-Tools Debian OS</a> est livré avec Direwolf et tous les outils réseau préconfigurés, vous offrant une solution TCP KISS TNC complète dès le démarrage &mdash; démarrez et connectez-vous.</p>
+  </section>
+
+  <section class="section">
+    <h2>Connectivité</h2>
+    <table class="freq-table">
+      <thead>
+        <tr>
+          <th>Méthode</th>
+          <th>Appareil / Logiciel</th>
+          <th>Protocole</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bluetooth KISS TNC</td>
+          <td>Kenwood TH-D74, TH-D75, VGC N-76, BHTech UV-PRO</td>
+          <td>Protocole KISS via Bluetooth</td>
+        </tr>
+        <tr>
+          <td>TCP/IP</td>
+          <td>TNC logiciel Direwolf</td>
+          <td>KISS-over-TCP (port par défaut 8001)</td>
+        </tr>
+        <tr>
+          <td>À venir</td>
+          <td>Kenwood TM-D750A</td>
+          <td>À déterminer</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Sylvain Deguire (VA2OPS) &middot; Québec, Canada</span>
+      <span>73 de VA2OPS</span>
+    </div>
+  </footer>
+
+</body>
+</html>
