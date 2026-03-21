@@ -27,7 +27,8 @@
   <header class="hero">
     <span class="hero-label">Linux &middot; Debian &middot; Emergency Communications</span>
     <h1>EmComm-Tools OS</h1>
-    <p>A bilingual (French/English) Debian-based Linux distribution built for amateur radio emergency communications. Fork of EmComm-Tools OS Community by TheTechPrepper (KT7RUN), maintained by Sylvain Deguire (VA2OPS).</p>
+    <p class="muted" style="font-size: 1.35rem; font-style: italic; margin-top: -0.5rem; margin-bottom: 1.5rem;">Explore. Connect. Respond.</p>
+    <p>A bilingual (French/English) Debian-based Linux distribution purpose-built for amateur radio emergency communications. Boot from USB, connect your radio, and you are on the air &mdash; with JS8Call, Pat-Winlink, VARA, VarAC, fldigi, and YAAC with SAR plugin ready to go.</p>
   </header>
 
   <section class="section">
@@ -50,13 +51,14 @@
       <li>Optimized for field deployment on rugged hardware (Panasonic Toughpads)</li>
       <li>Based on Debian Stable with 3&ndash;5 year LTS support cycle</li>
       <li>Customizable foundation for clubs, regional groups, and emergency orgs</li>
+      <li>YAAC Plugin for SAR operations &mdash; Field teams can mark evidence and objects found during searches directly on the YAAC map. Right-click to place a diamond-shaped marker with category, type, and notes. Objects can optionally be broadcast via APRS Bulletin</li>
       <li>Open source under Ms-PL license &mdash; fork it, make it yours</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>ISO Download</h2>
-    <p>The current ISO (version <strong>2.1.3</strong>) is approximately <strong>5.4 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
+    <p>The current ISO (version <strong>2.1.6</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
     <p>For devices with limited internal storage (like Panasonic Toughpads), maps can be hosted on an external drive or USB thumb drive instead of the internal disk.</p>
     <div class="links-row">
       <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Download ISO &#8599;</a>
@@ -64,13 +66,44 @@
   </section>
 
   <section class="section">
-    <h2>What's New in 2.1.3</h2>
+    <h2>What's New in 2.1.6</h2>
+
     <div class="cards" style="grid-template-columns: 1fr;">
+
       <div class="card">
-        <h3>Radio Configuration Editor (et-radio-config)</h3>
-        <p>New Flask web app (port 5057) for viewing, editing, creating, and duplicating radio JSON profiles through a visual form interface. No more hand-editing JSON files.</p>
-        <img src="https://raw.githubusercontent.com/emcomm-tools/media/main/screenshots/2.1.3/edit_radio.png" alt="Radio Configuration Editor interface" style="margin-top: 1rem; border-radius: var(--radius); border: 1px solid var(--border);">
+        <h3>Repeater Directory (et-repeater)</h3>
+        <p>New offline repeater browser for finding and programming nearby repeaters. Import CSV exports from RepeaterBook &mdash; no API key required. Fully functional without internet after import.</p>
+        <ul class="features mt-1" style="grid-template-columns: 1fr;">
+          <li>CSV import &mdash; Export from repeaterbook.com, import into the app. Multiple imports merge automatically</li>
+          <li>Automatic geocoding &mdash; Locations are geocoded via OpenStreetMap (Nominatim) during import to compute grid squares and distances</li>
+          <li>Distance filtering &mdash; Filter repeaters by distance from your station (uses grid square from user profile)</li>
+          <li>Band &amp; mode filters &mdash; Filter by band (10m/6m/2m/1.25m/70cm) and mode (FM/DMR/D-STAR/YSF/P25/NXDN)</li>
+          <li>Search &mdash; Search by callsign, frequency, location, or grid square</li>
+          <li>Sortable columns &mdash; Click any column header to sort ascending/descending</li>
+          <li>Favorites &mdash; Star repeaters to build a favorites list. Favorites filter overrides all other filters</li>
+          <li>Edit &amp; delete &mdash; Modify repeater details (frequency, offset, tone, location, grid) or delete entries</li>
+          <li>Radio programming &mdash; One-click "Set" button programs frequency, offset, and CTCSS tone via rigctld</li>
+          <li>Progress bar &mdash; Real-time geocoding progress during import</li>
+          <li>Persistence &mdash; Repeater data and favorites saved/restored via USB persistence</li>
+          <li>Bilingual EN/FR</li>
+        </ul>
+        <img src="https://raw.githubusercontent.com/emcomm-tools/media/main/screenshots/2.1.6/et-repeater-filter.png" alt="Repeater Directory with filters and search" style="margin-top: 1rem; border-radius: var(--radius); border: 1px solid var(--border);">
       </div>
+
+      <div class="card">
+        <h3>Digipeater Modes</h3>
+        <p>Two new digipeater modes in the dashboard. Both run Direwolf with configurable PBEACON (position beacon) and CBEACON (comment beacon) values from user.json.</p>
+        <ul class="features mt-1" style="grid-template-columns: 1fr;">
+          <li>APRS Digipeater &mdash; Fill-in APRS digipeater in the dashboard's APRS section</li>
+          <li>Packet Digipeater &mdash; Packet radio digipeater in the dashboard's Packet/BBS section</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Station Coordinates</h3>
+        <p>Optional latitude/longitude fields in the firstboot wizard and user configuration app. Grid square auto-fills from coordinates using Maidenhead conversion. Used by the Repeater Directory for distance calculations and by the APRS Digipeater for position beacons.</p>
+      </div>
+
     </div>
   </section>
 
@@ -135,7 +168,7 @@
 
   <section class="section">
     <h2>Why Debian?</h2>
-    <p>The original EmComm-Tools OS was built on Ubuntu with the philosophy of creating a frozen-in-time "appliance." While this has merit, the ham radio software landscape evolves rapidly &mdash; when JS8Call, fldigi, or pat-winlink release fixes, you need to be able to apply them. A frozen OS makes this difficult or impossible, and when the base OS reaches end-of-life, your package manager stops working entirely.</p>
+    <p>EmComm-Tools OS Debian Edition has started with a simple fork of the original EmComm-Tools OS Community project by Gaston Gonzalez, TheTechPrepper (KT7RUN). The original was built on Ubuntu with the philosophy of creating a frozen-in-time "appliance." While this has merit, the ham radio software landscape evolves rapidly &mdash; when JS8Call, fldigi, or pat-winlink release fixes, you need to be able to apply them. A frozen OS makes this difficult or impossible, and when the base OS reaches end-of-life, your package manager stops working entirely.</p>
     <p>Ubuntu is actually built on top of Debian. Moving from Ubuntu to Debian isn't a radical change &mdash; it's going back to the source. The main advantages:</p>
     <ul class="features">
       <li>No trademark restrictions &mdash; we can freely distribute pre-built ISO images</li>
@@ -161,7 +194,7 @@
       <a href="https://github.com/emcomm-tools/debian/" target="_blank" rel="noopener" class="btn">GitHub &#8599;</a>
       <a href="https://emcomm-tools.ca/FUTURES_fr.html" target="_blank" rel="noopener" class="btn">Documentation (FR) &#8599;</a>
       <a href="https://buymeacoffee.com/emcommtools" target="_blank" rel="noopener" class="btn">&#9749; Buy Me a Coffee</a>
-      <a href="/cdn-cgi/l/email-protection#660f08000926030b05090b0b4b1209090a15480507" class="btn">&#9993; <span class="__cf_email__" data-cfemail="abc2c5cdc4ebcec6c8c4c6c686dfc4c4c7d885c8ca">[email&#160;protected]</span></a>
+      <a href="/cdn-cgi/l/email-protection#234a4d454c63464e404c4e4e0e574c4c4f500d4042" class="btn">&#9993; <span class="__cf_email__" data-cfemail="3e575058517e5b535d515353134a5151524d105d5f">[email&#160;protected]</span></a>
     </div>
   </section>
 
@@ -179,9 +212,16 @@
       <li><strong>EA5HVK</strong> &mdash; VARA HF/FM modem development</li>
       <li><strong>VarAC Development Team</strong> &mdash; VarAC chat application for VARA</li>
       <li><strong>Andrew Pavlin (KA2DDO)</strong> &mdash; YAAC (Yet Another APRS Client)</li>
+      <li><strong>Martin Hebnes Pedersen (LA5NTA)</strong> &mdash; Pat Winlink</li>
     </ul>
   </section>
 
   <footer class="footer">
     <div class="footer-inner">
-      <span>&co
+      <span>&copy; 2026 Sylvain Deguire (VA2OPS) &middot; Quebec, Canada</span>
+      <span>73 de VA2OPS</span>
+    </div>
+  </footer>
+
+</body>
+</html>
