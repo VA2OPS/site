@@ -58,7 +58,7 @@
 
   <section class="section">
     <h2>ISO Download</h2>
-    <p>The current ISO (version <strong>2.1.6</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
+    <p>The current ISO (version <strong>2.1.7</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
     <p>For devices with limited internal storage (like Panasonic Toughpads), maps can be hosted on an external drive or USB thumb drive instead of the internal disk.</p>
     <div class="links-row">
       <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Download ISO &#8599;</a>
@@ -66,42 +66,34 @@
   </section>
 
   <section class="section">
-    <h2>What's New in 2.1.6</h2>
+    <h2>What's New in 2.1.7</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>Repeater Directory (et-repeater)</h3>
-        <p>New offline repeater browser for finding and programming nearby repeaters. Import CSV exports from RepeaterBook &mdash; no API key required. Fully functional without internet after import.</p>
-        <ul class="features mt-1" style="grid-template-columns: 1fr;">
-          <li>CSV import &mdash; Export from repeaterbook.com, import into the app. Multiple imports merge automatically</li>
-          <li>Automatic geocoding &mdash; Locations are geocoded via OpenStreetMap (Nominatim) during import to compute grid squares and distances</li>
-          <li>Distance filtering &mdash; Filter repeaters by distance from your station (uses grid square from user profile)</li>
-          <li>Band &amp; mode filters &mdash; Filter by band (10m/6m/2m/1.25m/70cm) and mode (FM/DMR/D-STAR/YSF/P25/NXDN)</li>
-          <li>Search &mdash; Search by callsign, frequency, location, or grid square</li>
-          <li>Sortable columns &mdash; Click any column header to sort ascending/descending</li>
-          <li>Favorites &mdash; Star repeaters to build a favorites list. Favorites filter overrides all other filters</li>
-          <li>Edit &amp; delete &mdash; Modify repeater details (frequency, offset, tone, location, grid) or delete entries</li>
-          <li>Radio programming &mdash; One-click "Set" button programs frequency, offset, and CTCSS tone via rigctld</li>
-          <li>Progress bar &mdash; Real-time geocoding progress during import</li>
-          <li>Persistence &mdash; Repeater data and favorites saved/restored via USB persistence</li>
-          <li>Bilingual EN/FR</li>
-        </ul>
+        <h3>GPS Tracking Mode</h3>
+        <p>New tracking mode updates your grid square and position in real-time from GPS. One-click Track button in the dashboard enables live updates to your coordinates every 15 seconds. The Repeater Directory auto-refreshes distances as you move.</p>
+      </div>
+
+      <div class="card">
+        <h3>Winlink ARDOP &amp; Packet Fixes</h3>
+        <p>Critical fixes for Winlink modes broken since the v2 supervisor migration &mdash; ARDOP connections, TX retries, Packet QSY, and Pat web UI filtering all restored to full operation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Repeater Directory Improvements</h3>
+        <p>Redesigned for touch screens &mdash; hamburger menu, tap-to-action popups, iOS-style toggles, distance dropdown, floating toast notifications, and full filter persistence between sessions.</p>
         <img src="https://raw.githubusercontent.com/emcomm-tools/media/main/screenshots/2.1.6/et-repeater-filter.png" alt="Repeater Directory with filters and search" style="margin-top: 1rem; border-radius: var(--radius); border: 1px solid var(--border);">
       </div>
 
       <div class="card">
-        <h3>Digipeater Modes</h3>
-        <p>Two new digipeater modes in the dashboard. Both run Direwolf with configurable PBEACON (position beacon) and CBEACON (comment beacon) values from user.json.</p>
-        <ul class="features mt-1" style="grid-template-columns: 1fr;">
-          <li>APRS Digipeater &mdash; Fill-in APRS digipeater in the dashboard's APRS section</li>
-          <li>Packet Digipeater &mdash; Packet radio digipeater in the dashboard's Packet/BBS section</li>
-        </ul>
+        <h3>YAAC Map Tile Cache Fix</h3>
+        <p>Fixed tile cache that was never reading from local SQLite files. Added Clear Cache and Refresh Cache buttons, plus full map fallback when primary source fails.</p>
       </div>
 
       <div class="card">
-        <h3>Station Coordinates</h3>
-        <p>Optional latitude/longitude fields in the firstboot wizard and user configuration app. Grid square auto-fills from coordinates using Maidenhead conversion. Used by the Repeater Directory for distance calculations and by the APRS Digipeater for position beacons.</p>
+        <h3>Data Transfer Progress &amp; Brightness Control</h3>
+        <p>Real-time progress bar for USB data transfer in the firstboot wizard. Added brightness slider in the system tray for field operations on touch screens.</p>
       </div>
 
     </div>

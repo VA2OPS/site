@@ -58,7 +58,7 @@
 
   <section class="section">
     <h2>Téléchargement ISO</h2>
-    <p>L'ISO actuel (version <strong>2.1.6</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
+    <p>L'ISO actuel (version <strong>2.1.7</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
     <p>Pour les appareils avec un stockage interne limité (comme les Panasonic Toughpads), les cartes peuvent être hébergées sur un disque externe ou une clé USB plutôt que sur le disque interne.</p>
     <div class="links-row">
       <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Télécharger l'ISO &#8599;</a>
@@ -66,42 +66,34 @@
   </section>
 
   <section class="section">
-    <h2>Nouveautés de la version 2.1.6</h2>
+    <h2>Nouveautés de la version 2.1.7</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>Répertoire de répéteurs (et-repeater)</h3>
-        <p>Nouveau navigateur de répéteurs hors ligne pour trouver et programmer les répéteurs à proximité. Importez les exports CSV de RepeaterBook &mdash; aucune clé API requise. Pleinement fonctionnel sans internet après l'importation.</p>
-        <ul class="features mt-1" style="grid-template-columns: 1fr;">
-          <li>Import CSV &mdash; Exportez depuis repeaterbook.com, importez dans l'application. Les imports multiples fusionnent automatiquement</li>
-          <li>Géocodage automatique &mdash; Les emplacements sont géocodés via OpenStreetMap (Nominatim) lors de l'importation pour calculer les carrés de grille et les distances</li>
-          <li>Filtrage par distance &mdash; Filtrez les répéteurs par distance depuis votre station (utilise le carré de grille du profil utilisateur)</li>
-          <li>Filtres bande &amp; mode &mdash; Filtrez par bande (10m/6m/2m/1.25m/70cm) et mode (FM/DMR/D-STAR/YSF/P25/NXDN)</li>
-          <li>Recherche &mdash; Recherchez par indicatif, fréquence, emplacement ou carré de grille</li>
-          <li>Colonnes triables &mdash; Cliquez sur n'importe quel en-tête de colonne pour trier en ordre croissant/décroissant</li>
-          <li>Favoris &mdash; Marquez des répéteurs pour créer une liste de favoris. Le filtre favoris a priorité sur tous les autres filtres</li>
-          <li>Édition &amp; suppression &mdash; Modifiez les détails d'un répéteur (fréquence, offset, tonalité, emplacement, grille) ou supprimez des entrées</li>
-          <li>Programmation radio &mdash; Bouton « Set » en un clic pour programmer la fréquence, l'offset et la tonalité CTCSS via rigctld</li>
-          <li>Barre de progression &mdash; Progression du géocodage en temps réel lors de l'importation</li>
-          <li>Persistance &mdash; Données des répéteurs et favoris sauvegardés/restaurés via la persistance USB</li>
-          <li>Bilingue EN/FR</li>
-        </ul>
-        <img src="https://raw.githubusercontent.com/emcomm-tools/media/main/screenshots/2.1.6/et-repeater-filter.png" alt="Répertoire de répéteurs avec filtres et recherche" style="margin-top: 1rem; border-radius: var(--radius); border: 1px solid var(--border);">
+        <h3>Mode suivi GPS</h3>
+        <p>Nouveau mode de suivi qui met &agrave; jour votre carr&eacute; de grille et votre position en temps r&eacute;el depuis le GPS. Bouton Track en un clic dans le tableau de bord pour activer les mises &agrave; jour en direct de vos coordonn&eacute;es toutes les 15 secondes. Le R&eacute;pertoire de r&eacute;p&eacute;teurs rafra&icirc;chit automatiquement les distances lorsque vous vous d&eacute;placez.</p>
       </div>
 
       <div class="card">
-        <h3>Modes Digipeater</h3>
-        <p>Deux nouveaux modes digipeater dans le tableau de bord. Les deux exécutent Direwolf avec des valeurs PBEACON (balise de position) et CBEACON (balise de commentaire) configurables depuis user.json.</p>
-        <ul class="features mt-1" style="grid-template-columns: 1fr;">
-          <li>Digipeater APRS &mdash; Digipeater APRS de remplissage dans la section APRS du tableau de bord</li>
-          <li>Digipeater Packet &mdash; Digipeater radio par paquets dans la section Packet/BBS du tableau de bord</li>
-        </ul>
+        <h3>Correctifs Winlink ARDOP &amp; Packet</h3>
+        <p>Correctifs critiques pour les modes Winlink bris&eacute;s depuis la migration du superviseur v2 &mdash; connexions ARDOP, retransmissions TX, QSY Packet et filtrage de l'interface web Pat tous restaur&eacute;s &agrave; pleine op&eacute;ration.</p>
       </div>
 
       <div class="card">
-        <h3>Coordonnées de la station</h3>
-        <p>Champs optionnels de latitude/longitude dans l'assistant de premier démarrage et l'application de configuration utilisateur. Le carré de grille se remplit automatiquement à partir des coordonnées via la conversion Maidenhead. Utilisé par le Répertoire de répéteurs pour le calcul des distances et par le Digipeater APRS pour les balises de position.</p>
+        <h3>Am&eacute;liorations du R&eacute;pertoire de r&eacute;p&eacute;teurs</h3>
+        <p>Redessin&eacute; pour les &eacute;crans tactiles &mdash; menu hamburger, popups d'action au toucher, bascules style iOS, s&eacute;lection de distance, notifications toast flottantes et persistance compl&egrave;te des filtres entre les sessions.</p>
+        <img src="https://raw.githubusercontent.com/emcomm-tools/media/main/screenshots/2.1.6/et-repeater-filter.png" alt="R&eacute;pertoire de r&eacute;p&eacute;teurs avec filtres et recherche" style="margin-top: 1rem; border-radius: var(--radius); border: 1px solid var(--border);">
+      </div>
+
+      <div class="card">
+        <h3>Correctif cache de tuiles YAAC</h3>
+        <p>Correction du cache de tuiles qui ne lisait jamais les fichiers SQLite locaux. Ajout des boutons Vider le cache et Rafra&icirc;chir le cache, plus un basculement complet de carte quand la source primaire &eacute;choue.</p>
+      </div>
+
+      <div class="card">
+        <h3>Progression du transfert de donn&eacute;es &amp; Contr&ocirc;le de luminosit&eacute;</h3>
+        <p>Barre de progression en temps r&eacute;el pour le transfert de donn&eacute;es USB dans l'assistant de premier d&eacute;marrage. Ajout d'un curseur de luminosit&eacute; dans la barre syst&egrave;me pour les op&eacute;rations terrain sur &eacute;crans tactiles.</p>
       </div>
 
     </div>
