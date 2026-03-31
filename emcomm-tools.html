@@ -28,6 +28,8 @@
     <span class="hero-label">Linux &middot; Debian &middot; Emergency Communications</span>
     <h1>EmComm-Tools OS</h1>
     <p class="muted" style="font-size: 1.35rem; font-style: italic; margin-top: -0.5rem; margin-bottom: 1.5rem;">Explore. Connect. Respond.</p>
+    <div class="sf-root" data-id="3944784" data-badge="oss-rising-star-black" data-metadata="achievement=oss-rising-star" style="width:125px"><a href="https://sourceforge.net/projects/emcomm-tools/" target="_blank">emcomm-tools</a></div>
+    <script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3944784';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();</script>
     <p>A bilingual (French/English) Debian-based Linux distribution purpose-built for amateur radio emergency communications. Boot from USB, connect your radio, and you are on the air &mdash; with JS8Call, Pat-Winlink, VARA, VarAC, fldigi, and YAAC with SAR plugin ready to go.</p>
   </header>
 
@@ -51,6 +53,7 @@
       <li>Optimized for field deployment on rugged hardware (Panasonic Toughpads)</li>
       <li>Based on Debian Stable with 3&ndash;5 year LTS support cycle</li>
       <li>Customizable foundation for clubs, regional groups, and emergency orgs</li>
+      <li>POTA/SOTA Field Logger &mdash; Built-in logging for Parks on the Air and Summits on the Air activations with ADIF export</li>
       <li>YAAC Plugin for SAR operations &mdash; Field teams can mark evidence and objects found during searches directly on the YAAC map.</li>
       <li>Open source under Ms-PL license &mdash; fork it, make it yours</li>
     </ul>
@@ -58,7 +61,7 @@
 
   <section class="section">
     <h2>ISO Download</h2>
-    <p>The current ISO (version <strong>2.1.7</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
+    <p>The current ISO (version <strong>2.1.8</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
     <p>For devices with limited internal storage (like Panasonic Toughpads), maps can be hosted on an external drive or USB thumb drive instead of the internal disk.</p>
     <div class="links-row">
       <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Download ISO &#8599;</a>
@@ -66,34 +69,40 @@
   </section>
 
   <section class="section">
-    <h2>What's New in 2.1.7</h2>
+    <h2>What's New in 2.1.8</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>GPS Tracking Mode</h3>
-        <p>New tracking mode updates your grid square and position in real-time from GPS. One-click Track button in the dashboard enables live updates to your coordinates every 15 seconds. The Repeater Directory auto-refreshes distances as you move.</p>
+        <h3>POTA/SOTA Field Logger (et-logger)</h3>
+        <p>New field logging application for Parks on the Air and Summits on the Air activations. POTA season is coming &mdash; your EmComm station is now ready for it out of the box.</p>
+        <ul class="features mt-1" style="grid-template-columns: 1fr;">
+          <li>Auto-QSY &mdash; Frequency, mode, and band update live in the browser when you turn the VFO knob</li>
+          <li>Callsign lookup &mdash; Merged US/CA license database with autocomplete</li>
+          <li>Map view &mdash; Leaflet map with contact lines, callsign labels, and distance</li>
+          <li>Nearest POTA parks &mdash; 87,000 parks in SQLite with bounding-box filter and auto-zoom</li>
+          <li>Park-to-Park (P2P) &mdash; Multi-park support for 2-fer/3-fer activations</li>
+          <li>ADIF export &mdash; Per-park files with POTA naming convention</li>
+          <li>Touch-friendly &mdash; Custom popup pickers for RST, Band, Mode (designed for 7" screens)</li>
+          <li>GPS position, duplicate detection, QSO counter (10 for valid activation)</li>
+          <li>Dark theme, bilingual EN/FR</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>Winlink ARDOP &amp; Packet Fixes</h3>
-        <p>Critical fixes for Winlink modes broken since the v2 supervisor migration &mdash; ARDOP connections, TX retries, Packet QSY, and Pat web UI filtering all restored to full operation.</p>
-      </div>
-
-      <div class="card">
-        <h3>Repeater Directory Improvements</h3>
-        <p>Redesigned for touch screens &mdash; hamburger menu, tap-to-action popups, iOS-style toggles, distance dropdown, floating toast notifications, and full filter persistence between sessions.</p>
+        <h3>GPS Tracking &amp; Repeater Directory</h3>
+        <p>Real-time GPS tracking updates your grid square and position every 15 seconds. The Repeater Directory auto-refreshes distances as you move, and has been redesigned for touch screens with hamburger menu, tap-to-action popups, and full filter persistence.</p>
         <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;"><a href="repeateur-1.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="repeateur-1.png" alt="Repeater Directory with GPS tracking" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a><a href="repeteur-2.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="repeteur-2.png" alt="Repeater Directory hamburger menu with filters" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a></div>
       </div>
 
       <div class="card">
-        <h3>YAAC Map Tile Cache Fix</h3>
-        <p>Fixed tile cache that was never reading from local SQLite files. Added Clear Cache and Refresh Cache buttons, plus full map fallback when primary source fails.</p>
+        <h3>Persistent Radio Connection (rig-client)</h3>
+        <p>All radio communication now goes through a single persistent TCP connection to rigctld &mdash; no more subprocess spawning, reducing relay clicks on older rigs like the FT-897D. Background polling refreshes radio state every 2 seconds, and applications are notified instantly when you change frequency on the radio.</p>
       </div>
 
       <div class="card">
-        <h3>Data Transfer Progress &amp; Brightness Control</h3>
-        <p>Real-time progress bar for USB data transfer in the firstboot wizard. Added brightness slider in the system tray for field operations on touch screens.</p>
+        <h3>Bug Fixes</h3>
+        <p>JS8Call &amp; WSJT-X save path fix for HDD installs (crash-on-launch resolved). Repeater Directory FM mode programming fix for radios that rejected passband parameters. Plus all previous fixes for Winlink ARDOP/Packet, YAAC tile cache, and brightness control.</p>
       </div>
 
     </div>
@@ -186,7 +195,7 @@
       <a href="https://github.com/emcomm-tools/debian/" target="_blank" rel="noopener" class="btn">GitHub &#8599;</a>
       <a href="https://emcomm-tools.ca/FUTURES_fr.html" target="_blank" rel="noopener" class="btn">Documentation (FR) &#8599;</a>
       <a href="https://buymeacoffee.com/emcommtools" target="_blank" rel="noopener" class="btn">&#9749; Buy Me a Coffee</a>
-      <a href="/cdn-cgi/l/email-protection#234a4d454c63464e404c4e4e0e574c4c4f500d4042" class="btn">&#9993; <span class="__cf_email__" data-cfemail="3e575058517e5b535d515353134a5151524d105d5f">[email&#160;protected]</span></a>
+      <a href="mailto:info@emcomm-tools.ca" class="btn">&#9993; info@emcomm-tools.ca</a>
     </div>
   </section>
 

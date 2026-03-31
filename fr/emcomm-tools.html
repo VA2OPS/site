@@ -28,6 +28,8 @@
     <span class="hero-label">Linux &middot; Debian &middot; Communications d'urgence</span>
     <h1>EmComm-Tools OS</h1>
     <p class="muted" style="font-size: 1.35rem; font-style: italic; margin-top: -0.5rem; margin-bottom: 1.5rem;">Explorer. Connecter. Répondre.</p>
+    <div class="sf-root" data-id="3944784" data-badge="oss-rising-star-black" data-metadata="achievement=oss-rising-star" style="width:125px"><a href="https://sourceforge.net/projects/emcomm-tools/" target="_blank">emcomm-tools</a></div>
+    <script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3944784';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();</script>
     <p>Une distribution Linux bilingue (français/anglais) basée sur Debian, conçue spécifiquement pour les communications d'urgence radioamateur. Démarrez depuis une clé USB, branchez votre radio, et vous êtes en ondes &mdash; avec JS8Call, Pat-Winlink, VARA, VarAC, fldigi, et YAAC avec plugin SAR prêts à l'emploi.</p>
   </header>
 
@@ -51,6 +53,7 @@
       <li>Optimisé pour le déploiement terrain sur du matériel robuste (Panasonic Toughpads)</li>
       <li>Basé sur Debian Stable avec cycle de support LTS de 3 à 5 ans</li>
       <li>Base personnalisable pour les clubs, groupes régionaux et organismes d'urgence</li>
+      <li>Journal de terrain POTA/SOTA &mdash; Journal intégré pour les activations Parks on the Air et Summits on the Air avec export ADIF</li>
       <li>Plugin YAAC pour les opérations SAR &mdash; Les équipes terrain peuvent marquer les évidences et objets trouvés lors des recherches directement sur la carte YAAC.</li>
       <li>Open source sous licence Ms-PL &mdash; forkez-le, adaptez-le à vos besoins</li>
     </ul>
@@ -58,7 +61,7 @@
 
   <section class="section">
     <h2>Téléchargement ISO</h2>
-    <p>L'ISO actuel (version <strong>2.1.7</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
+    <p>L'ISO actuel (version <strong>2.1.8</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
     <p>Pour les appareils avec un stockage interne limité (comme les Panasonic Toughpads), les cartes peuvent être hébergées sur un disque externe ou une clé USB plutôt que sur le disque interne.</p>
     <div class="links-row">
       <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Télécharger l'ISO &#8599;</a>
@@ -66,34 +69,40 @@
   </section>
 
   <section class="section">
-    <h2>Nouveautés de la version 2.1.7</h2>
+    <h2>Nouveautés de la version 2.1.8</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>Mode suivi GPS</h3>
-        <p>Nouveau mode de suivi qui met &agrave; jour votre carr&eacute; de grille et votre position en temps r&eacute;el depuis le GPS. Bouton Track en un clic dans le tableau de bord pour activer les mises &agrave; jour en direct de vos coordonn&eacute;es toutes les 15 secondes. Le R&eacute;pertoire de r&eacute;p&eacute;teurs rafra&icirc;chit automatiquement les distances lorsque vous vous d&eacute;placez.</p>
+        <h3>Journal de terrain POTA/SOTA (et-logger)</h3>
+        <p>Nouvelle application de journalisation terrain pour les activations Parks on the Air et Summits on the Air. La saison POTA approche &mdash; votre station EmComm est maintenant pr&ecirc;te d&egrave;s la sortie de la bo&icirc;te.</p>
+        <ul class="features mt-1" style="grid-template-columns: 1fr;">
+          <li>Auto-QSY &mdash; Fr&eacute;quence, mode et bande se mettent &agrave; jour en direct dans le navigateur quand vous tournez le VFO</li>
+          <li>Recherche d'indicatif &mdash; Base de donn&eacute;es de licences US/CA fusionn&eacute;e avec autocompl&eacute;tion</li>
+          <li>Vue carte &mdash; Carte Leaflet avec lignes de contact, &eacute;tiquettes d'indicatif et distance</li>
+          <li>Parcs POTA &agrave; proximit&eacute; &mdash; 87 000 parcs en SQLite avec filtre par bo&icirc;te englobante et zoom automatique</li>
+          <li>Park-to-Park (P2P) &mdash; Support multi-parcs pour les activations 2-fer/3-fer</li>
+          <li>Export ADIF &mdash; Fichiers par parc avec convention de nommage POTA</li>
+          <li>Tactile &mdash; S&eacute;lecteurs popup personnalis&eacute;s pour RST, Bande, Mode (con&ccedil;u pour &eacute;crans 7")</li>
+          <li>Position GPS, d&eacute;tection de doublons, compteur QSO (10 pour une activation valide)</li>
+          <li>Th&egrave;me sombre, bilingue EN/FR</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>Correctifs Winlink ARDOP &amp; Packet</h3>
-        <p>Correctifs critiques pour les modes Winlink bris&eacute;s depuis la migration du superviseur v2 &mdash; connexions ARDOP, retransmissions TX, QSY Packet et filtrage de l'interface web Pat tous restaur&eacute;s &agrave; pleine op&eacute;ration.</p>
+        <h3>Suivi GPS &amp; R&eacute;pertoire de r&eacute;p&eacute;teurs</h3>
+        <p>Le suivi GPS en temps r&eacute;el met &agrave; jour votre carr&eacute; de grille et votre position toutes les 15 secondes. Le R&eacute;pertoire de r&eacute;p&eacute;teurs rafra&icirc;chit automatiquement les distances lorsque vous vous d&eacute;placez, et a &eacute;t&eacute; redessin&eacute; pour les &eacute;crans tactiles avec menu hamburger, popups d'action au toucher et persistance compl&egrave;te des filtres.</p>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;"><a href="../repeateur-1.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="../repeateur-1.png" alt="R&eacute;pertoire de r&eacute;p&eacute;teurs avec suivi GPS" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a><a href="../repeteur-2.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="../repeteur-2.png" alt="R&eacute;pertoire de r&eacute;p&eacute;teurs menu hamburger avec filtres" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a></div>
       </div>
 
       <div class="card">
-        <h3>Am&eacute;liorations du R&eacute;pertoire de r&eacute;p&eacute;teurs</h3>
-        <p>Redessin&eacute; pour les &eacute;crans tactiles &mdash; menu hamburger, popups d'action au toucher, bascules style iOS, s&eacute;lection de distance, notifications toast flottantes et persistance compl&egrave;te des filtres entre les sessions.</p>
-        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;"><a href="../repeateur-1.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="../repeateur-1.png" alt="Répertoire de répéteurs avec suivi GPS" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a><a href="../repeteur-2.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="../repeteur-2.png" alt="Répertoire de répéteurs menu hamburger avec filtres" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a></div>
+        <h3>Connexion radio persistante (rig-client)</h3>
+        <p>Toute la communication radio passe maintenant par une seule connexion TCP persistante vers rigctld &mdash; plus de lancement de sous-processus, r&eacute;duisant les clics de relais sur les rigs plus anciens comme le FT-897D. Le polling en arri&egrave;re-plan rafra&icirc;chit l'&eacute;tat de la radio toutes les 2 secondes, et les applications sont notifi&eacute;es instantan&eacute;ment quand vous changez de fr&eacute;quence sur la radio.</p>
       </div>
 
       <div class="card">
-        <h3>Correctif cache de tuiles YAAC</h3>
-        <p>Correction du cache de tuiles qui ne lisait jamais les fichiers SQLite locaux. Ajout des boutons Vider le cache et Rafra&icirc;chir le cache, plus un basculement complet de carte quand la source primaire &eacute;choue.</p>
-      </div>
-
-      <div class="card">
-        <h3>Progression du transfert de donn&eacute;es &amp; Contr&ocirc;le de luminosit&eacute;</h3>
-        <p>Barre de progression en temps r&eacute;el pour le transfert de donn&eacute;es USB dans l'assistant de premier d&eacute;marrage. Ajout d'un curseur de luminosit&eacute; dans la barre syst&egrave;me pour les op&eacute;rations terrain sur &eacute;crans tactiles.</p>
+        <h3>Correctifs</h3>
+        <p>Correction du chemin de sauvegarde JS8Call &amp; WSJT-X pour les installations HDD (crash au lancement r&eacute;solu). Correction de la programmation FM du R&eacute;pertoire de r&eacute;p&eacute;teurs pour les radios qui rejetaient les param&egrave;tres de bande passante. Plus tous les correctifs pr&eacute;c&eacute;dents pour Winlink ARDOP/Packet, le cache de tuiles YAAC et le contr&ocirc;le de luminosit&eacute;.</p>
       </div>
 
     </div>
@@ -186,7 +195,7 @@
       <a href="https://github.com/emcomm-tools/debian/" target="_blank" rel="noopener" class="btn">GitHub &#8599;</a>
       <a href="https://emcomm-tools.ca/FUTURES_fr.html" target="_blank" rel="noopener" class="btn">Documentation (FR) &#8599;</a>
       <a href="https://buymeacoffee.com/emcommtools" target="_blank" rel="noopener" class="btn">&#9749; Buy Me a Coffee</a>
-      <a href="/cdn-cgi/l/email-protection#93fafdf5fcd3f6fef0fcfefebee7fcfcffe0bdf0f2" class="btn">&#9993; <span class="__cf_email__" data-cfemail="fe97909891be9b939d919393d38a9191928dd09d9f">[email&#160;protected]</span></a>
+      <a href="mailto:info@emcomm-tools.ca" class="btn">&#9993; info@emcomm-tools.ca</a>
     </div>
   </section>
 
