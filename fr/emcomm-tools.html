@@ -53,15 +53,16 @@
       <li>Optimisé pour le déploiement terrain sur du matériel robuste (Panasonic Toughpads)</li>
       <li>Basé sur Debian Stable avec cycle de support LTS de 3 à 5 ans</li>
       <li>Base personnalisable pour les clubs, groupes régionaux et organismes d'urgence</li>
-      <li>Journal de terrain POTA/SOTA &mdash; Journal intégré pour les activations Parks on the Air et Summits on the Air avec export ADIF</li>
+      <li>Journal de terrain POTA/SOTA <li>Journal de terrain POTA/SOTA &mdash; Journal intégré pour les activations Parks on the Air et Summits on the Air avec export ADIF</li>mdash; Journal intégré avec Voice Keyer, enregistreur audio, auto-QSY et export ADIF</li>
       <li>Plugin YAAC pour les opérations SAR &mdash; Les équipes terrain peuvent marquer les évidences et objets trouvés lors des recherches directement sur la carte YAAC.</li>
+      <li>Outil de programmation radio Chirp pour gérer les mémoires radio</li>
       <li>Open source sous licence Ms-PL &mdash; forkez-le, adaptez-le à vos besoins</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>Téléchargement ISO</h2>
-    <p>L'ISO actuel (version <strong>2.1.8</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
+    <p>L'ISO actuel (version <strong>2.2.0</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
     <p>Pour les appareils avec un stockage interne limité (comme les Panasonic Toughpads), les cartes peuvent être hébergées sur un disque externe ou une clé USB plutôt que sur le disque interne.</p>
     <div class="links-row">
       <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Télécharger l'ISO &#8599;</a>
@@ -69,40 +70,28 @@
   </section>
 
   <section class="section">
-    <h2>Nouveautés de la version 2.1.8</h2>
+    <h2>Nouveautés de la version 2.2.0</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>Journal de terrain POTA/SOTA (et-logger)</h3>
-        <p>Nouvelle application de journalisation terrain pour les activations Parks on the Air et Summits on the Air. La saison POTA approche &mdash; votre station EmComm est maintenant pr&ecirc;te d&egrave;s la sortie de la bo&icirc;te.</p>
-        <ul class="features mt-1" style="grid-template-columns: 1fr;">
-          <li>Auto-QSY &mdash; Fr&eacute;quence, mode et bande se mettent &agrave; jour en direct dans le navigateur quand vous tournez le VFO</li>
-          <li>Recherche d'indicatif &mdash; Base de donn&eacute;es de licences US/CA fusionn&eacute;e avec autocompl&eacute;tion</li>
-          <li>Vue carte &mdash; Carte Leaflet avec lignes de contact, &eacute;tiquettes d'indicatif et distance</li>
-          <li>Parcs POTA &agrave; proximit&eacute; &mdash; 87 000 parcs en SQLite avec filtre par bo&icirc;te englobante et zoom automatique</li>
-          <li>Park-to-Park (P2P) &mdash; Support multi-parcs pour les activations 2-fer/3-fer</li>
-          <li>Export ADIF &mdash; Fichiers par parc avec convention de nommage POTA</li>
-          <li>Tactile &mdash; S&eacute;lecteurs popup personnalis&eacute;s pour RST, Bande, Mode (con&ccedil;u pour &eacute;crans 7")</li>
-          <li>Position GPS, d&eacute;tection de doublons, compteur QSO (10 pour une activation valide)</li>
-          <li>Th&egrave;me sombre, bilingue EN/FR</li>
-        </ul>
+        <h3>et-logger v1.4 &mdash; Voice Keyer &amp; Enregistreur audio</h3>
+        <p>Le journal de terrain POTA/SOTA inclut maintenant un <strong>Voice Keyer</strong> &mdash; enregistrez votre message CQ et rejouez-le en ondes avec PTT automatique. Mode r&eacute;p&eacute;tition avec d&eacute;lai configurable entre les appels. Plus un nouvel <strong>enregistreur audio</strong> pour capturer l'audio RX radio avec lecteur HTML5 int&eacute;gr&eacute;. Mises &agrave; jour de fr&eacute;quence et mode en temps r&eacute;el via Server-Sent Events.</p>
       </div>
 
       <div class="card">
-        <h3>Suivi GPS &amp; R&eacute;pertoire de r&eacute;p&eacute;teurs</h3>
-        <p>Le suivi GPS en temps r&eacute;el met &agrave; jour votre carr&eacute; de grille et votre position toutes les 15 secondes. Le R&eacute;pertoire de r&eacute;p&eacute;teurs rafra&icirc;chit automatiquement les distances lorsque vous vous d&eacute;placez, et a &eacute;t&eacute; redessin&eacute; pour les &eacute;crans tactiles avec menu hamburger, popups d'action au toucher et persistance compl&egrave;te des filtres.</p>
-        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;"><a href="../repeateur-1.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="../repeateur-1.png" alt="R&eacute;pertoire de r&eacute;p&eacute;teurs avec suivi GPS" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a><a href="../repeteur-2.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="../repeteur-2.png" alt="R&eacute;pertoire de r&eacute;p&eacute;teurs menu hamburger avec filtres" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a></div>
+        <h3>Auto-configuration PTT VARA FM</h3>
+        <p>Les param&egrave;tres PTT de VARA FM sont maintenant enti&egrave;rement configur&eacute;s depuis le profil radio &mdash; plus de configuration manuelle dans VARA FM. Mod&egrave;le de radio, CATPort et d&eacute;bit sont &eacute;crits automatiquement dans VARAFM.ini. 8 radios pr&eacute;configur&eacute;es incluant FT-857D, FT-897D, FT-818ND, FT-991A, IC-705, IC-7100 et IC-9700.</p>
       </div>
 
       <div class="card">
-        <h3>Connexion radio persistante (rig-client)</h3>
-        <p>Toute la communication radio passe maintenant par une seule connexion TCP persistante vers rigctld &mdash; plus de lancement de sous-processus, r&eacute;duisant les clics de relais sur les rigs plus anciens comme le FT-897D. Le polling en arri&egrave;re-plan rafra&icirc;chit l'&eacute;tat de la radio toutes les 2 secondes, et les applications sont notifi&eacute;es instantan&eacute;ment quand vous changez de fr&eacute;quence sur la radio.</p>
+        <h3>Syst&egrave;me audio ALSA pur</h3>
+        <p>Suppression de PulseAudio et PipeWire pour un acc&egrave;s mat&eacute;riel ALSA direct. Tous les modes num&eacute;riques, Wine/VARA et les outils audio communiquent directement avec la carte son &mdash; aucune couche interm&eacute;diaire. &Eacute;limine les probl&egrave;mes de verrouillage des p&eacute;riph&eacute;riques audio et am&eacute;liore la fiabilit&eacute;. Mixeur graphique (qasmixer) inclus.</p>
       </div>
 
       <div class="card">
-        <h3>Correctifs</h3>
-        <p>Correction du chemin de sauvegarde JS8Call &amp; WSJT-X pour les installations HDD (crash au lancement r&eacute;solu). Correction de la programmation FM du R&eacute;pertoire de r&eacute;p&eacute;teurs pour les radios qui rejetaient les param&egrave;tres de bande passante. Plus tous les correctifs pr&eacute;c&eacute;dents pour Winlink ARDOP/Packet, le cache de tuiles YAAC et le contr&ocirc;le de luminosit&eacute;.</p>
+        <h3>Am&eacute;liorations du bureau &amp; ergonomie</h3>
+        <p>Clavier virtuel Onboard pour &eacute;crans tactiles, plugin panneau batterie et luminosit&eacute;, outil de programmation radio Chirp ajout&eacute;, ic&ocirc;nes de la barre syst&egrave;me agrandies &agrave; 32px, horloge UTC, et persistance compl&egrave;te du panneau/clavier via USB. Les r&eacute;seaux WiFi avec espaces dans le nom sont maintenant sauvegard&eacute;s correctement.</p>
       </div>
 
     </div>

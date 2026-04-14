@@ -53,15 +53,16 @@
       <li>Optimized for field deployment on rugged hardware (Panasonic Toughpads)</li>
       <li>Based on Debian Stable with 3&ndash;5 year LTS support cycle</li>
       <li>Customizable foundation for clubs, regional groups, and emergency orgs</li>
-      <li>POTA/SOTA Field Logger &mdash; Built-in logging for Parks on the Air and Summits on the Air activations with ADIF export</li>
+      <li>POTA/SOTA Field Logger <li>POTA/SOTA Field Logger &mdash; Built-in logging for Parks on the Air and Summits on the Air activations with ADIF export</li>mdash; Built-in logging with Voice Keyer, Air Recorder, auto-QSY, and ADIF export</li>
       <li>YAAC Plugin for SAR operations &mdash; Field teams can mark evidence and objects found during searches directly on the YAAC map.</li>
+      <li>Chirp radio programming tool for managing radio memories</li>
       <li>Open source under Ms-PL license &mdash; fork it, make it yours</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>ISO Download</h2>
-    <p>The current ISO (version <strong>2.1.8</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
+    <p>The current ISO (version <strong>2.2.0</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
     <p>For devices with limited internal storage (like Panasonic Toughpads), maps can be hosted on an external drive or USB thumb drive instead of the internal disk.</p>
     <div class="links-row">
       <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Download ISO &#8599;</a>
@@ -69,40 +70,28 @@
   </section>
 
   <section class="section">
-    <h2>What's New in 2.1.8</h2>
+    <h2>What's New in 2.2.0</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>POTA/SOTA Field Logger (et-logger)</h3>
-        <p>New field logging application for Parks on the Air and Summits on the Air activations. POTA season is coming &mdash; your EmComm station is now ready for it out of the box.</p>
-        <ul class="features mt-1" style="grid-template-columns: 1fr;">
-          <li>Auto-QSY &mdash; Frequency, mode, and band update live in the browser when you turn the VFO knob</li>
-          <li>Callsign lookup &mdash; Merged US/CA license database with autocomplete</li>
-          <li>Map view &mdash; Leaflet map with contact lines, callsign labels, and distance</li>
-          <li>Nearest POTA parks &mdash; 87,000 parks in SQLite with bounding-box filter and auto-zoom</li>
-          <li>Park-to-Park (P2P) &mdash; Multi-park support for 2-fer/3-fer activations</li>
-          <li>ADIF export &mdash; Per-park files with POTA naming convention</li>
-          <li>Touch-friendly &mdash; Custom popup pickers for RST, Band, Mode (designed for 7" screens)</li>
-          <li>GPS position, duplicate detection, QSO counter (10 for valid activation)</li>
-          <li>Dark theme, bilingual EN/FR</li>
-        </ul>
+        <h3>et-logger v1.4 &mdash; Voice Keyer &amp; Air Recorder</h3>
+        <p>The POTA/SOTA Field Logger now includes a <strong>Voice Keyer</strong> &mdash; record your CQ message and play it back over the air with automatic PTT. Supports repeat mode with configurable delay between calls. Plus a new <strong>Air Recorder</strong> to capture radio RX audio for playback with a built-in HTML5 player. Real-time frequency and mode updates via Server-Sent Events.</p>
       </div>
 
       <div class="card">
-        <h3>GPS Tracking &amp; Repeater Directory</h3>
-        <p>Real-time GPS tracking updates your grid square and position every 15 seconds. The Repeater Directory auto-refreshes distances as you move, and has been redesigned for touch screens with hamburger menu, tap-to-action popups, and full filter persistence.</p>
-        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;"><a href="repeateur-1.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="repeateur-1.png" alt="Repeater Directory with GPS tracking" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a><a href="repeteur-2.png" target="_blank" rel="noopener" style="flex: 1; min-width: 280px;"><img src="repeteur-2.png" alt="Repeater Directory hamburger menu with filters" style="width: 100%; border-radius: var(--radius); border: 1px solid var(--border);"></a></div>
+        <h3>VARA FM PTT Auto-Configuration</h3>
+        <p>VARA FM PTT settings are now fully configured from the radio profile &mdash; no more manual setup in VARA FM. Rig model, CATPort, and baud rate are written automatically to VARAFM.ini. 8 radios pre-configured including FT-857D, FT-897D, FT-818ND, FT-991A, IC-705, IC-7100, and IC-9700.</p>
       </div>
 
       <div class="card">
-        <h3>Persistent Radio Connection (rig-client)</h3>
-        <p>All radio communication now goes through a single persistent TCP connection to rigctld &mdash; no more subprocess spawning, reducing relay clicks on older rigs like the FT-897D. Background polling refreshes radio state every 2 seconds, and applications are notified instantly when you change frequency on the radio.</p>
+        <h3>Pure ALSA Audio System</h3>
+        <p>Removed PulseAudio and PipeWire for direct ALSA hardware access. All digital modes, Wine/VARA, and audio tools now talk directly to the sound card &mdash; no intermediary layer. Eliminates audio device locking issues and improves reliability. GUI mixer (qasmixer) included for easy volume control.</p>
       </div>
 
       <div class="card">
-        <h3>Bug Fixes</h3>
-        <p>JS8Call &amp; WSJT-X save path fix for HDD installs (crash-on-launch resolved). Repeater Directory FM mode programming fix for radios that rejected passband parameters. Plus all previous fixes for Winlink ARDOP/Packet, YAAC tile cache, and brightness control.</p>
+        <h3>Desktop &amp; Usability Improvements</h3>
+        <p>Onboard virtual keyboard for touchscreens, battery and brightness panel plugin, Chirp radio programming tool added, system tray icons enlarged to 32px, UTC clock display, and full panel/keyboard persistence via USB. WiFi networks with spaces in their name now saved correctly.</p>
       </div>
 
     </div>
