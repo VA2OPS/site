@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EmComm-Tools OS — VA2OPS</title>
-  <meta name="description" content="EmComm-Tools OS Debian Edition — Bilingual Linux distribution for amateur radio emergency communications.">
+  <title>LiaisonOS — VA2OPS</title>
+  <meta name="description" content="LiaisonOS — Bilingual Debian Linux distribution for amateur radio emergency communications.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,30 +15,28 @@
       <button class="nav-toggle" onclick="document.querySelector('.topnav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
       <div class="topnav-links">
         <a href="index.html">About</a>
-        <a href="emcomm-tools.html" class="active">EmComm-Tools</a>
+        <a href="liaisonos.html" class="active">LiaisonOS</a>
         <a href="bluemap.html">BlueMap APRS</a>
         <a href="bbs-server.html">BBS Server</a>
-        <a href="services.html">Services</a>
-        <a href="fr/emcomm-tools.html" style="color: var(--accent);">FR</a>
+        <a href="fr/liaisonos.html" style="color: var(--accent);">FR</a>
       </div>
     </div>
   </nav>
 
   <header class="hero">
     <span class="hero-label">Linux &middot; Debian &middot; Emergency Communications</span>
-    <h1>EmComm-Tools OS</h1>
+    <h1>LiaisonOS</h1>
     <p class="muted" style="font-size: 1.35rem; font-style: italic; margin-top: -0.5rem; margin-bottom: 1.5rem;">Explore. Connect. Respond.</p>
-    <div class="sf-root" data-id="3944784" data-badge="oss-rising-star-black" data-metadata="achievement=oss-rising-star" style="width:125px"><a href="https://sourceforge.net/projects/emcomm-tools/" target="_blank">emcomm-tools</a></div>
-    <script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3944784';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();</script>
+
     <p>A bilingual (French/English) Debian-based Linux distribution purpose-built for amateur radio emergency communications. Boot from USB, connect your radio, and you are on the air &mdash; with JS8Call, Pat-Winlink, VARA, VarAC, fldigi, and YAAC with SAR plugin ready to go.</p>
   </header>
 
   <section class="section">
     <h2>What It Is</h2>
-    <p>EmComm-Tools OS Debian Edition is a ready-to-deploy Linux operating system that comes pre-loaded with everything a ham radio operator needs for digital emergency communications. Boot from a USB drive and you're operational.</p>
+    <p>LiaisonOS is a ready-to-deploy Linux operating system that comes pre-loaded with everything a ham radio operator needs for digital emergency communications. Boot from a USB drive and you're operational.</p>
     <p>This edition is built on Debian rather than Ubuntu, providing longer support cycles, no trademark restrictions on ISO redistribution.</p>
 
-    <img src="va2ops-emcomm-tools.png" alt="EmComm-Tools OS Debian Edition desktop with launcher panel" style="margin-top: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+    <img src="va2ops-emcomm-tools.png" alt="LiaisonOS desktop with launcher panel" style="margin-top: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
   </section>
 
   <section class="section">
@@ -65,7 +63,7 @@
     <p>The current ISO (version <strong>2.2.0</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
     <p>For devices with limited internal storage (like Panasonic Toughpads), maps can be hosted on an external drive or USB thumb drive instead of the internal disk.</p>
     <div class="links-row">
-      <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Download ISO &#8599;</a>
+      <a href="https://sourceforge.net/projects/liaisonos/files/ISO/" target="_blank" rel="noopener" class="btn btn-primary">Download ISO &#8599;</a>
     </div>
   </section>
 
@@ -158,12 +156,12 @@
 
     </div>
 
-    <p class="mt-2">For beginners, <a href="https://etcher.balena.io" target="_blank" rel="noopener">balenaEtcher</a> works on all platforms and is the easiest option. For advanced users, <a href="https://ventoy.net" target="_blank" rel="noopener">Ventoy</a> lets you put EmComm-Tools, a Windows installer, and system rescue tools all on one USB.</p>
+    <p class="mt-2">For beginners, <a href="https://etcher.balena.io" target="_blank" rel="noopener">balenaEtcher</a> works on all platforms and is the easiest option. For advanced users, <a href="https://ventoy.net" target="_blank" rel="noopener">Ventoy</a> lets you put LiaisonOS, a Windows installer, and system rescue tools all on one USB.</p>
   </section>
 
   <section class="section">
     <h2>Why Debian?</h2>
-    <p>EmComm-Tools OS Debian Edition has started with a simple fork of the original EmComm-Tools OS Community project by Gaston Gonzalez, TheTechPrepper (KT7RUN). The original was built on Ubuntu with the philosophy of creating a frozen-in-time "appliance." While this has merit, the ham radio software landscape evolves rapidly &mdash; when JS8Call, fldigi, or pat-winlink release fixes, you need to be able to apply them. A frozen OS makes this difficult or impossible, and when the base OS reaches end-of-life, your package manager stops working entirely.</p>
+    <p>LiaisonOS has started with a simple fork of the original LiaisonOS Community project by Gaston Gonzalez, TheTechPrepper (KT7RUN). The original was built on Ubuntu with the philosophy of creating a frozen-in-time "appliance." While this has merit, the ham radio software landscape evolves rapidly &mdash; when JS8Call, fldigi, or pat-winlink release fixes, you need to be able to apply them. A frozen OS makes this difficult or impossible, and when the base OS reaches end-of-life, your package manager stops working entirely.</p>
     <p>Ubuntu is actually built on top of Debian. Moving from Ubuntu to Debian isn't a radical change &mdash; it's going back to the source. The main advantages:</p>
     <ul class="features">
       <li>No trademark restrictions &mdash; we can freely distribute pre-built ISO images</li>
@@ -184,25 +182,25 @@
     <h2>Contributing</h2>
     <p>This is an open-source project. Contributions, bug reports, and feature requests are welcome.</p>
     <div class="links-row">
-      <a href="https://emcomm-tools.ca/" target="_blank" rel="noopener" class="btn btn-primary">Website &#8599;</a>
-      <a href="https://sourceforge.net/projects/emcomm-tools/files/ISO/" target="_blank" rel="noopener" class="btn">ISO Downloads &#8599;</a>
-      <a href="https://github.com/emcomm-tools/debian/" target="_blank" rel="noopener" class="btn">GitHub &#8599;</a>
-      <a href="https://emcomm-tools.ca/FUTURES_fr.html" target="_blank" rel="noopener" class="btn">Documentation (FR) &#8599;</a>
-      <a href="https://buymeacoffee.com/emcommtools" target="_blank" rel="noopener" class="btn">&#9749; Buy Me a Coffee</a>
-      <a href="mailto:info@emcomm-tools.ca" class="btn">&#9993; info@emcomm-tools.ca</a>
+      <a href="https://liaisonos.com/" target="_blank" rel="noopener" class="btn btn-primary">Website &#8599;</a>
+      <a href="https://sourceforge.net/projects/liaisonos/files/ISO/" target="_blank" rel="noopener" class="btn">ISO Downloads &#8599;</a>
+      <a href="https://github.com/liaisonos/debian/" target="_blank" rel="noopener" class="btn">GitHub &#8599;</a>
+      <a href="https://liaisonos.com/FUTURES_fr.html" target="_blank" rel="noopener" class="btn">Documentation (FR) &#8599;</a>
+      <a href="https://buymeacoffee.com/liaisonos" target="_blank" rel="noopener" class="btn">&#9749; Buy Me a Coffee</a>
+      <a href="mailto:info@liaisonos.com" class="btn">&#9993; info@liaisonos.com</a>
     </div>
   </section>
 
   <section class="section">
     <h2>License</h2>
-    <p>This project is a derivative work of EmComm-Tools OS Community, licensed under the <strong>Microsoft Public License (Ms-PL)</strong>. In compliance with Ms-PL Section 3(C), we retain all copyright, patent, trademark, and attribution notices from the original software.</p>
+    <p>This project is a derivative work of LiaisonOS Community, licensed under the <strong>Microsoft Public License (Ms-PL)</strong>. In compliance with Ms-PL Section 3(C), we retain all copyright, patent, trademark, and attribution notices from the original software.</p>
     <p>The Ms-PL allows creating derivative works, distributing pre-built ISO images, and modification and redistribution. The switch from Ubuntu to Debian eliminates the Ubuntu trademark restrictions that previously prevented distribution of pre-built images, while fully respecting the Ms-PL terms.</p>
   </section>
 
   <section class="section">
     <h2>Acknowledgments</h2>
     <ul class="features" style="grid-template-columns: 1fr;">
-      <li><strong>Gaston Gonzalez (KT7RUN)</strong> aka The Tech Prepper &mdash; Original EmComm-Tools OS Community project</li>
+      <li><strong>Gaston Gonzalez (KT7RUN)</strong> aka The Tech Prepper &mdash; Original LiaisonOS Community project</li>
       <li><strong>The Debian Ham Radio Team</strong> &mdash; Maintaining excellent ham radio packages</li>
       <li><strong>José Alberto Nieto Ros (EA5HVK)</strong> &mdash; VARA HF/FM modem development</li>
       <li><strong>Irad Deutsch (4Z1AC) and the VarAC Development Team</strong> &mdash; VarAC chat application for VARA</li>
