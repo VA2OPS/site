@@ -62,7 +62,7 @@
 
   <section class="section">
     <h2>ISO Download</h2>
-    <p>The current ISO (version <strong>2.2.3</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
+    <p>The current ISO (version <strong>2.2.4</strong>) is approximately <strong>4.7 GB</strong> and includes everything you need to get started. Maps are not included in the ISO to keep the download size manageable &mdash; on first run, the system will offer to download and install the map tilesets for your region.</p>
     <p>For devices with limited internal storage (like Panasonic Toughpads), maps can be hosted on an external drive or USB thumb drive instead of the internal disk.</p>
     <div class="links-row">
       <a href="https://liaisonos.com/download" target="_blank" rel="noopener" class="btn btn-primary">Download ISO &#8599;</a>
@@ -70,38 +70,18 @@
   </section>
 
   <section class="section">
-    <h2>What's New in 2.2.0/2.2.1/2.2.2</h2>
+    <h2>What's New in 2.2.4</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
-
+	
       <div class="card">
-        <h3>Pat Winlink </h3>
-        <p>Updated to v1.0.0 — Latest upstream release of the Pat Winlink client</p>
+        <h3>QtTermTCP — BBS Directory</h3>
+        <p>Filterable list of known TPRFN BBS stations with auto QSY on select</p>
       </div>
 
       <div class="card">
-        <h3>VARA HF/FM and QtTermTCP launcher (available in 2.2.1)</h3>
-        <p>Direct launcher for Vara in Others mode section, and QtTermTCP under system menu HamRadio.</p>
-      </div>
-
-      <div class="card">
-        <h3>et-logger v1.4 &mdash; Voice Keyer &amp; Air Recorder</h3>
-        <p>The POTA/SOTA Field Logger now includes a <strong>Voice Keyer</strong> &mdash; record your CQ message and play it back over the air with automatic PTT. Supports repeat mode with configurable delay between calls. Plus a new <strong>Air Recorder</strong> to capture radio RX audio for playback with a built-in HTML5 player. Real-time frequency and mode updates via Server-Sent Events.</p>
-      </div>
-
-      <div class="card">
-        <h3>VARA FM PTT Auto-Configuration</h3>
-        <p>VARA FM PTT settings are now fully configured from the radio profile &mdash; no more manual setup in VARA FM. Rig model, CATPort, and baud rate are written automatically to VARAFM.ini. 8 radios pre-configured including FT-857D, FT-897D, FT-818ND, FT-991A, IC-705, IC-7100, and IC-9700.</p>
-      </div>
-
-      <div class="card">
-        <h3>Pure ALSA Audio System</h3>
-        <p>Removed PulseAudio and PipeWire for direct ALSA hardware access. All digital modes, Wine/VARA, and audio tools now talk directly to the sound card &mdash; no intermediary layer. Eliminates audio device locking issues and improves reliability. GUI mixer (qasmixer) included for easy volume control.</p>
-      </div>
-
-      <div class="card">
-        <h3>Desktop &amp; Usability Improvements</h3>
-        <p>Onboard virtual keyboard for touchscreens, battery and brightness panel plugin, Chirp radio programming tool added, system tray icons enlarged to 32px, UTC clock display, and full panel/keyboard persistence via USB. WiFi networks with spaces in their name now saved correctly.</p>
+        <h3>QtTermTCP — BBS Session Cache</h3>
+        <p>Sessions with packet BBS nodes are now cached locally by callsign using SQLite. Bulletin lists and message bodies are stored automatically during your session.</p>
       </div>
 
     </div>

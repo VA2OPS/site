@@ -60,7 +60,7 @@
 
   <section class="section">
     <h2>Téléchargement ISO</h2>
-    <p>L'ISO actuel (version <strong>2.2.0</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
+    <p>L'ISO actuel (version <strong>2.2.4</strong>) fait environ <strong>4,7 Go</strong> et inclut tout ce dont vous avez besoin pour commencer. Les cartes ne sont pas incluses dans l'ISO afin de garder la taille du téléchargement raisonnable &mdash; au premier démarrage, le système vous proposera de télécharger et installer les tuiles cartographiques pour votre région.</p>
     <p>Pour les appareils avec un stockage interne limité (comme les Panasonic Toughpads), les cartes peuvent être hébergées sur un disque externe ou une clé USB plutôt que sur le disque interne.</p>
     <div class="links-row">
       <a href="https://liaisonos.com/download_fr" target="_blank" rel="noopener" class="btn btn-primary">Télécharger l'ISO &#8599;</a>
@@ -68,38 +68,18 @@
   </section>
 
   <section class="section">
-    <h2>Nouveautés de la version 2.2.0/2.2.1/2.2.2</h2>
+    <h2>Nouveautés de la version 2.2.4</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>Pat Winlink </h3>
-        <p>Mise à jour v1.0.0 — Dernière version de Pat Winlink client</p>
+        <h3>Répertoire BBS</h3>
+        <p>Liste filtrable des stations BBS connues (réseau TPRFN et autres). Filtrage automatique par bande courante (détectée via rigctld/FLRig), largeur de bande VARA et heures d'opération UTC</p>
       </div>
 
       <div class="card">
-        <h3>VARA HF/FM et QtTermTCP launcher (disponible avec 2.2.1)</h3>
-        <p>Démarrage du modem Vara dans la section Autres et de QtTermTCP sous le menu principal HamRadio.</p>
-      </div>
-
-      <div class="card">
-        <h3>et-logger v1.4 &mdash; Voice Keyer &amp; Enregistreur audio</h3>
-        <p>Le journal de terrain POTA/SOTA inclut maintenant un <strong>Voice Keyer</strong> &mdash; enregistrez votre message CQ et rejouez-le en ondes avec PTT automatique. Mode r&eacute;p&eacute;tition avec d&eacute;lai configurable entre les appels. Plus un nouvel <strong>enregistreur audio</strong> pour capturer l'audio RX radio avec lecteur HTML5 int&eacute;gr&eacute;. Mises &agrave; jour de fr&eacute;quence et mode en temps r&eacute;el via Server-Sent Events.</p>
-      </div>
-
-      <div class="card">
-        <h3>Auto-configuration PTT VARA FM</h3>
-        <p>Les param&egrave;tres PTT de VARA FM sont maintenant enti&egrave;rement configur&eacute;s depuis le profil radio &mdash; plus de configuration manuelle dans VARA FM. Mod&egrave;le de radio, CATPort et d&eacute;bit sont &eacute;crits automatiquement dans VARAFM.ini. 8 radios pr&eacute;configur&eacute;es incluant FT-857D, FT-897D, FT-818ND, FT-991A, IC-705, IC-7100 et IC-9700.</p>
-      </div>
-
-      <div class="card">
-        <h3>Syst&egrave;me audio ALSA pur</h3>
-        <p>Suppression de PulseAudio et PipeWire pour un acc&egrave;s mat&eacute;riel ALSA direct. Tous les modes num&eacute;riques, Wine/VARA et les outils audio communiquent directement avec la carte son &mdash; aucune couche interm&eacute;diaire. &Eacute;limine les probl&egrave;mes de verrouillage des p&eacute;riph&eacute;riques audio et am&eacute;liore la fiabilit&eacute;. Mixeur graphique (qasmixer) inclus.</p>
-      </div>
-
-      <div class="card">
-        <h3>Am&eacute;liorations du bureau &amp; ergonomie</h3>
-        <p>Clavier virtuel Onboard pour &eacute;crans tactiles, plugin panneau batterie et luminosit&eacute;, outil de programmation radio Chirp ajout&eacute;, ic&ocirc;nes de la barre syst&egrave;me agrandies &agrave; 32px, horloge UTC, et persistance compl&egrave;te du panneau/clavier via USB. Les r&eacute;seaux WiFi avec espaces dans le nom sont maintenant sauvegard&eacute;s correctement.</p>
+        <h3>QtTermTCP — Cache de sessions BBS</h3>
+        <p> Les sessions avec les nœuds BBS packet sont maintenant mises en cache localement par indicatif via SQLite. Les listes de bulletins et les corps de messages sont enregistrés automatiquement pendant la session</p>
       </div>
 
     </div>
