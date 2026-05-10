@@ -87,18 +87,18 @@
   </section>
 
   <section class="section">
-    <h2>Nouveautés de la version 2.2.4</h2>
+    <h2>Nouveautés de la version 2.3.0</h2>
 
     <div class="cards" style="grid-template-columns: 1fr;">
 
       <div class="card">
-        <h3>Répertoire BBS</h3>
-        <p>Liste filtrable des stations BBS connues (réseau TPRFN et autres). Filtrage automatique par bande courante (détectée via rigctld/FLRig), largeur de bande VARA et heures d'opération UTC</p>
+        <h3>Bouton Sync GPS</h3>
+        <p>Un nouveau bouton Sync dans le tableau de bord permet de synchroniser l'heure système depuis un appareil Android via l'app LiaisonGPS (Bluetooth), ou depuis un récepteur GPS série (Kenwood TH-D74, TH-D75). Une seule pression — aucun terminal requis.</p>
       </div>
 
       <div class="card">
-        <h3>QtTermTCP — Cache de sessions BBS</h3>
-        <p> Les sessions avec les nœuds BBS packet sont maintenant mises en cache localement par indicatif via SQLite. Les listes de bulletins et les corps de messages sont enregistrés automatiquement pendant la session</p>
+        <h3>QtGpsSync — Entièrement recodé en C++</h3>
+        <p>L'outil GPS Bluetooth a été reconstruit de zéro en C++. Il se connecte via Bluetooth en deux modes : mode Sync règle l'heure système et le locator Maidenhead en une seule opération, mode GPS fournit un flux GPS continu en temps réel. Lancez-le directement depuis le tableau de bord en un clic.</p>
       </div>
 
     </div>
